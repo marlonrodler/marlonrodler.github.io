@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+div.card-container {
+    width: 300px;
+    height: 380px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+}
+
+div.card-container:hover, 
+div.card-container:hover .bottom {
+    transition: 300ms ease;
+    background: #ff9113;
+    color: #fff;
+}
+
+div.card-container:hover div.bottom a.btn,
+div.card-container:hover div.bottom h4,
+div.card-container:hover div.bottom h3,
+div.card-container:hover div.bottom p {
+    transition: 400ms ease;
+    color: #fff;
+}
+
+div.card-container div.top {
+    height: 80px;
+    border-radius: 6px;
+    background: #ff9113;
+    display: flex;
+    justify-content: center;
+}
+
+div.card-container div.top div.image-container {
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border-radius: 50%;
+    margin-top: 40px;
+    transition: 1s ease;
+}
+
+div.card-container div.top div.image-container:hover {
+    transform: scale(1.15);
+}
+
+div.card-container div.top div.image-container img {
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+div.card-container div.bottom {
+    background-color: #fff;
+    padding: 20px;
+    padding-top: 60px;
+    text-align: center;
+}
+
+div.card-container div.bottom h3 {
+    font-size: 2.6rem;
+    margin: 20px 0 5px;
+    color: rgba(0, 0, 0, .9);
+}
+
+div.card-container div.bottom h4 {
+    font-size: 2.0rem;
+    margin: 5px 0 20px;
+    color: #ff9113;
+}
+
+div.card-container div.bottom p {
+    color: rgba(0, 0, 0, .7);
+    margin: 20px 0 40px;
+}
+
+div.card-container div.bottom a.btn {
+    background: none;
+    padding: 14px 30px;
+    color: #ff9113;
+    font-size: 1.6rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+}
+
+div.card-container div.bottom a.btn:hover {
+    border: 1px solid #fff;
+}
