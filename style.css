@@ -25,6 +25,7 @@ div.card-container {
     background: #fff;
     border-radius: 6px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+    transition: all .6s ease;
 }
 
 div.card-container:hover, 
@@ -76,6 +77,7 @@ div.card-container div.bottom {
     padding: 20px;
     padding-top: 60px;
     text-align: center;
+    transition: all .6s ease;
 }
 
 div.card-container div.bottom h3 {
