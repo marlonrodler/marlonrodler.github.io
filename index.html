@@ -1,26 +1,144 @@
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marlon Rodler</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marlon Rodler</title>
+  <meta name="description" content="Marlon Rodler, desenvolvedor Salesforce e web. Projetos e ferramentas.">
+  <meta property="og:title" content="Marlon Rodler">
+  <meta property="og:description" content="Desenvolvedor Salesforce e web. Projetos e ferramentas.">
+  <meta property="og:image" content="https://marlonrodler.github.io/images/eu.jpg">
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="card-container">
-        <div class="top">
-            <div class="image-container">
-                <img src="./images/eu.jpg" alt="" />
-            </div>
-        </div>
+  <a class="skip" href="#projetos">Ir para os projetos</a>
 
-        <div class="bottom">
-            <h3>Marlon Rodler</h3>
-            <h4>Web/Salesforce Developer</h4>
-            <p>Fique por dentro de todos os meus Projetos!</p>
-            <a href="https://marlonrodler.github.io/project-showcase/" class="btn" target="_blank" rel="noreferrer">GO!</a>
+  <header class="hero wrap">
+    <img class="hero__photo" src="./images/eu.jpg" alt="Foto de Marlon Rodler" width="88" height="88">
+    <h1 class="hero__name">Marlon<br>Rodler</h1>
+    <p class="hero__role">Desenvolvedor Salesforce e web</p>
+    <p class="hero__bio">
+      Construo ferramentas que deixam o desenvolvimento mais rápido e mais seguro.
+      Hoje trabalho com Salesforce e uso IA no dia a dia para planejar, revisar e testar código.
+    </p>
+    <nav class="hero__links" aria-label="Contato">
+      <a href="https://github.com/marlonrodler" target="_blank" rel="noreferrer">GitHub</a>
+      <!-- LinkedIn: adicionar a URL do perfil -->
+    </nav>
+  </header>
+
+  <main>
+    <section class="section wrap" id="projetos" aria-labelledby="atuais">
+      <div class="section__head">
+        <h2 id="atuais">Projetos atuais</h2>
+        <p>Ferramentas que estou construindo agora, com IA no processo de desenvolvimento.</p>
+      </div>
+
+      <article class="project">
+        <div class="project__id">
+          <h3>Reldor</h3>
+          <span class="status status--live">Em uso</span>
         </div>
-    </div>
+        <div class="project__body">
+          <p>
+            Um guardião para o desenvolvimento Salesforce. Antes de codar, analisa o impacto da
+            mudança na org: automações existentes, ordem de execução e limites. Depois, roda os
+            testes e mostra a cobertura de cada classe. Funciona no Kiro e no Claude Code.
+          </p>
+          <ul class="stack" aria-label="Tecnologias">
+            <li>Node.js</li><li>Salesforce CLI</li><li>Kiro</li><li>Claude Code</li>
+          </ul>
+          <a class="link" href="https://github.com/marlonrodler/reldor" target="_blank" rel="noreferrer">Ver repositório</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project__id">
+          <h3>Owldit</h3>
+          <span class="status">Em desenvolvimento</span>
+        </div>
+        <div class="project__body">
+          <p>
+            Acompanha empresas da B3. Lê os balanços publicados na CVM, cruza com a cotação diária
+            e avisa quando algo importante muda. Mostra sinais e quantas vezes cada um acertou no
+            histórico, sem dizer o que comprar ou vender.
+          </p>
+          <ul class="stack" aria-label="Tecnologias">
+            <li>Python</li><li>Supabase</li><li>React</li><li>GitHub Actions</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project__id">
+          <h3>Player Ascend</h3>
+          <span class="status">Em desenvolvimento</span>
+        </div>
+        <div class="project__body">
+          <p>
+            Aplicativo web com contas aprovadas manualmente e dados no Supabase.
+          </p>
+          <ul class="stack" aria-label="Tecnologias">
+            <li>Supabase</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="section wrap" aria-labelledby="primeiros">
+      <div class="section__head">
+        <h2 id="primeiros">Primeiros projetos</h2>
+        <p>Feitos durante os estudos, à mão e sem IA.</p>
+      </div>
+
+      <ul class="shelf">
+        <li class="piece">
+          <img src="https://raw.githubusercontent.com/marlonrodler/typing-speed/main/typing-speed.jpg" alt="Tela do Typing Speed" loading="lazy">
+          <h3>Typing Speed</h3>
+          <p>Teste de velocidade de digitação.</p>
+          <div class="piece__links">
+            <a href="https://marlonrodler.github.io/typing-speed/" target="_blank" rel="noreferrer">Abrir</a>
+            <a href="https://github.com/marlonrodler/typing-speed" target="_blank" rel="noreferrer">Código</a>
+          </div>
+        </li>
+        <li class="piece">
+          <img src="https://raw.githubusercontent.com/marlonrodler/leagueoflegends-game/main/lol-game.png" alt="Tela do jogo de League of Legends" loading="lazy">
+          <h3>League of Legends Game</h3>
+          <p>Jogo no navegador com o tema de League of Legends.</p>
+          <div class="piece__links">
+            <a href="https://marlonrodler.github.io/leagueoflegends-game/" target="_blank" rel="noreferrer">Abrir</a>
+            <a href="https://github.com/marlonrodler/leagueoflegends-game" target="_blank" rel="noreferrer">Código</a>
+          </div>
+        </li>
+        <li class="piece">
+          <img src="https://raw.githubusercontent.com/marlonrodler/pokedex-react/main/pokedex-react.jpg" alt="Tela da Pokédex" loading="lazy">
+          <h3>Pokédex</h3>
+          <p>Pokédex em React consumindo a PokéAPI.</p>
+          <div class="piece__links">
+            <a href="https://marlonrodler.github.io/pokedex-react/" target="_blank" rel="noreferrer">Abrir</a>
+            <a href="https://github.com/marlonrodler/pokedex-react" target="_blank" rel="noreferrer">Código</a>
+          </div>
+        </li>
+        <li class="piece">
+          <img src="https://raw.githubusercontent.com/marlonrodler/clone-spotify/master/clone-spotify.jpg" alt="Tela do clone do Spotify" loading="lazy">
+          <h3>Clone do Spotify</h3>
+          <p>A interface do Spotify recriada em HTML e CSS.</p>
+          <div class="piece__links">
+            <a href="https://marlonrodler.github.io/clone-spotify/" target="_blank" rel="noreferrer">Abrir</a>
+            <a href="https://github.com/marlonrodler/clone-spotify" target="_blank" rel="noreferrer">Código</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <p>Marlon Rodler</p>
+    <a href="https://github.com/marlonrodler" target="_blank" rel="noreferrer">github.com/marlonrodler</a>
+  </footer>
 </body>
 </html>
