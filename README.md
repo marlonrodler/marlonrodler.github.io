@@ -11,7 +11,7 @@ src/template.mjs    o HTML da página, montado a partir do conteúdo
 src/icons.mjs       ícones em SVG
 build.mjs           gera index.html a partir do conteúdo
 assets/site.css     estilos (tokens de cor, tipo e espaço no topo do arquivo)
-assets/site.js      tema claro/escuro/automático, menu do celular
+assets/site.js      tema (com a troca em círculo), a "gota" dos botões e o menu do celular
 assets/img/         imagens otimizadas (WebP), imagem de compartilhamento e ícone
 index.html          arquivos gerados: não edite à mão
 en/index.html
@@ -35,6 +35,15 @@ Abra http://localhost:8080. O site usa caminhos a partir da raiz (`/assets/...`)
 3. Faça o commit do `index.html` gerado junto com a mudança.
 
 Links de contato vazios (`null`) não aparecem no site. Para trocar uma tela de projeto, coloque a imagem em `assets/img/` (WebP, com largura e altura reais) e ajuste o `media` do projeto.
+
+## Movimento
+
+Os efeitos são feitos só com CSS e um pouco de JavaScript, sem biblioteca:
+
+- A "gota" dos botões de tema e idioma desliza até a opção escolhida, com uma curva de mola.
+- A troca de tema se espalha num círculo a partir do botão (View Transitions; em navegadores sem suporte, troca na hora).
+- Os blocos sobem de leve ao entrar na tela (CSS `animation-timeline: view()`, sem JavaScript).
+- Quem ativa "reduzir movimento" no sistema vê tudo sem animação.
 
 ## Idiomas
 

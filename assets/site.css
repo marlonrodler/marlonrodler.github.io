@@ -42,6 +42,9 @@
   --gutter: clamp(16px, 4vw, 40px);
   --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
   --dur: 180ms;
+  --spring: cubic-bezier(0.3, 1.35, 0.5, 1);   /* passa um pouco e volta, como no iOS */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --seg-thumb: #ffffff;
 }
 
 /* Escuro: automático pelo sistema ou escolhido pela pessoa */
@@ -57,6 +60,7 @@
     --accent-ink: #000000;
     --header-bg: rgb(0 0 0 / 0.72);
     --shadow-media: 0 1px 2px rgb(0 0 0 / 0.4), 0 24px 60px -24px rgb(0 0 0 / 0.9);
+    --seg-thumb: #48484a;
     color-scheme: dark;
   }
 }
@@ -71,7 +75,8 @@
   --accent-ink: #000000;
   --header-bg: rgb(0 0 0 / 0.72);
   --shadow-media: 0 1px 2px rgb(0 0 0 / 0.4), 0 24px 60px -24px rgb(0 0 0 / 0.9);
-  color-scheme: dark;
+  --seg-thumb: #48484a;
+    color-scheme: dark;
 }
 :root[data-theme="light"] { color-scheme: light; }
 
@@ -125,10 +130,10 @@ main:focus { outline: none; }
   min-height: 44px; padding: 0 var(--s-5);
   border-radius: var(--r-pill);
   font: 500 var(--step-0)/1 var(--font); letter-spacing: -0.01em;
-  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease), transform var(--dur) var(--ease);
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease), transform 420ms var(--spring);
 }
 .btn:hover { text-decoration: none; }
-.btn:active { transform: scale(0.98); }
+.btn:active { transform: scale(0.96); transition-duration: 80ms; }
 .btn--filled { background: var(--btn-bg, var(--ink)); color: var(--btn-ink, var(--bg)); }
 .btn--filled:hover { background: var(--btn-bg-hover, color-mix(in srgb, var(--btn-bg, var(--ink)) 86%, var(--bg))); }
 .btn--accent { --btn-bg: var(--accent); --btn-ink: var(--accent-ink); }
@@ -155,7 +160,7 @@ main:focus { outline: none; }
 }
 
 /* Controle de tema: segmentado, como no iOS */
-.seg { display: inline-flex; padding: 2px; border-radius: 10px; background: var(--bg-2); }
+.seg { position: relative; isolation: isolate; display: inline-flex; padding: 2px; border-radius: 10px; background: var(--bg-2); }
 .seg__btn {
   display: grid; place-items: center; width: 32px; height: 28px;
   border: 0; border-radius: 8px; background: transparent; color: var(--ink-3); cursor: pointer;
@@ -163,12 +168,11 @@ main:focus { outline: none; }
 }
 .seg__btn .icon { width: 16px; height: 16px; }
 .seg__btn:hover { color: var(--ink); }
-.seg__btn[aria-pressed="true"], .seg__btn[aria-current="true"] { background: var(--bg); color: var(--ink); box-shadow: 0 1px 3px rgb(0 0 0 / 0.16); }
+.seg__btn[aria-pressed="true"], .seg__btn[aria-current="true"] { color: var(--ink); }
+.seg:not(.has-thumb) .seg__btn:is([aria-pressed="true"], [aria-current="true"]) { background: var(--seg-thumb); box-shadow: 0 1px 3px rgb(0 0 0 / 0.16); }
 .seg__link { width: auto; min-width: 32px; padding: 0 8px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.02em; text-decoration: none; }
 .seg__link:hover { text-decoration: none; }
 .seg--lang { margin-right: 4px; }
-:root[data-theme="dark"] .seg__btn:is([aria-pressed="true"], [aria-current="true"]) { background: #3a3a3c; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .seg__btn:is([aria-pressed="true"], [aria-current="true"]) { background: #3a3a3c; } }
 
 /* ---------- Cabeçalho: o único lugar com material translúcido ---------- */
 .site-header {
@@ -189,7 +193,6 @@ main:focus { outline: none; }
 .nav a:hover { color: var(--ink); text-decoration: none; background: var(--bg-2); }
 .site-header__tools { display: flex; align-items: center; gap: var(--s-1); }
 .nav-toggle { display: none; }
-.nav-toggle__close { display: none; }
 
 @media (max-width: 959px) {
   .site-header__inner { gap: var(--s-2); }
@@ -200,11 +203,23 @@ main:focus { outline: none; }
     position: absolute; inset: 56px 0 auto; margin: 0;
     padding: var(--s-2) var(--gutter) var(--s-5);
     background: var(--bg); border-bottom: 1px solid var(--line);
-    display: none;
+    box-shadow: 0 24px 40px -28px rgb(0 0 0 / 0.35);
+    visibility: hidden; opacity: 0; pointer-events: none;
+    transform: translateY(-10px); transform-origin: top center;
+    transition: opacity 200ms var(--ease), transform 320ms var(--ease-out), visibility 0s linear 320ms;
   }
-  .nav-open .nav { display: block; }
-  .nav-open .nav-toggle__open { display: none; }
-  .nav-open .nav-toggle__close { display: block; }
+  .nav-open .nav {
+    visibility: visible; opacity: 1; pointer-events: auto; transform: none;
+    transition: opacity 220ms var(--ease), transform 460ms var(--spring), visibility 0s;
+  }
+  .nav li, .nav__theme {
+    opacity: 0; translate: 0 -6px;
+    transition: opacity 200ms var(--ease), translate 360ms var(--spring);
+  }
+  .nav-open .nav li, .nav-open .nav__theme {
+    opacity: 1; translate: 0 0;
+    transition-delay: calc(60ms + var(--i, 0) * 40ms);
+  }
   .nav ul { flex-direction: column; gap: 0; }
   .nav a { width: 100%; min-height: 48px; font-size: var(--step-1); color: var(--ink); border-bottom: 1px solid var(--line); border-radius: 0; padding: 0; }
   .nav a:hover { background: none; }
@@ -424,9 +439,97 @@ main:focus { outline: none; }
 .site-footer { border-top: 1px solid var(--line); background: var(--bg-2); color: var(--ink-3); font-size: var(--step--1); letter-spacing: 0; }
 .site-footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-2) var(--s-5); padding-block: var(--s-5); }
 
+/* =========================================================
+   6. Movimento — leve, nativo e sem biblioteca.
+   Tudo aqui é desligado por prefers-reduced-motion (fim do arquivo).
+   ========================================================= */
+
+/* Controle segmentado: a "gota" desliza até a opção escolhida, estica no caminho e volta */
+.seg__thumb {
+  position: absolute; z-index: -1; top: 2px; bottom: 2px; left: 0;
+  width: var(--w, 0px); translate: var(--x, 0px) 0;
+  border-radius: 8px; background: var(--seg-thumb);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.16), 0 0 0 0.5px rgb(0 0 0 / 0.04);
+  transition: translate 460ms var(--spring), width 460ms var(--spring), background-color 300ms var(--ease);
+  pointer-events: none;
+}
+.seg.no-anim .seg__thumb { transition: none; }
+.seg__thumb.is-moving { animation: thumb-squish 460ms var(--ease-out); }
+@keyframes thumb-squish {
+  0% { scale: 1 1; }
+  35% { scale: 1.22 0.84; }
+  70% { scale: 0.96 1.04; }
+  100% { scale: 1 1; }
+}
+.seg__btn .icon { transition: scale 400ms var(--spring), rotate 500ms var(--spring); }
+.seg__btn.is-picked .icon { animation: icon-pop 520ms var(--spring); }
+@keyframes icon-pop { 0% { scale: 0.6; rotate: -40deg; } 100% { scale: 1; rotate: 0deg; } }
+.seg__btn:active .icon { scale: 0.85; }
+
+/* Troca de tema: o tema novo se espalha num círculo a partir do botão (View Transitions) */
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+::view-transition-new(root) { animation: theme-reveal 620ms cubic-bezier(0.65, 0, 0.25, 1) both; }
+@keyframes theme-reveal {
+  from { clip-path: circle(0px at var(--vt-x, 50%) var(--vt-y, 0px)); }
+  to { clip-path: circle(var(--vt-r, 150vmax) at var(--vt-x, 50%) var(--vt-y, 0px)); }
+}
+
+/* Ícone do menu: as duas linhas viram um X */
+.burger { position: relative; display: block; width: 18px; height: 12px; }
+.burger i {
+  position: absolute; left: 0; right: 0; height: 1.6px; border-radius: 1px; background: currentColor;
+  transition: top 300ms var(--ease-out), rotate 420ms var(--spring);
+}
+.burger i:first-child { top: 2px; }
+.burger i:last-child { top: 9px; }
+.nav-open .burger i { top: 5.2px; }
+.nav-open .burger i:first-child { rotate: 45deg; }
+.nav-open .burger i:last-child { rotate: -45deg; }
+
+/* Cabeçalho: a linha de baixo e o fundo aparecem suavemente ao rolar */
+.site-header { transition: border-color 300ms var(--ease), background-color 300ms var(--ease); }
+
+/* Mouse por cima (só em telas com mouse) */
+@media (hover: hover) {
+  .other { transition: transform 480ms var(--spring), box-shadow 480ms var(--ease-out); }
+  .other:hover { transform: translateY(-4px); box-shadow: 0 22px 44px -28px rgb(0 0 0 / 0.45); }
+  .other__shot { transition: scale 700ms var(--ease-out); }
+  .other:hover .other__shot { scale: 1.035; }
+
+  .idx__mark { transition: scale 420ms var(--spring), rotate 420ms var(--spring); }
+  .idx:hover .idx__mark { scale: 1.08; rotate: -4deg; }
+
+  .project .phone, .project .browser { transition: transform 700ms var(--spring), box-shadow 700ms var(--ease-out); }
+  .project:hover .phone--overlap { transform: translateY(-8px) rotate(-1.5deg); }
+  .project:hover .media--phone .phone { transform: translateY(-6px); }
+
+  .contact-link { transition: background-color var(--dur) var(--ease), transform 420ms var(--spring); }
+  .contact-link:hover { transform: translateY(-2px); }
+
+  .cred, .job__body { transition: transform 480ms var(--spring); }
+}
+.contact-link:active { transform: scale(0.97); transition-duration: 80ms; }
+
+/* Ao rolar: os blocos sobem de leve ao entrar na tela. Só onde o navegador suporta (CSS nativo,
+   sem JavaScript); nos outros, tudo aparece normalmente. Sem mexer na opacidade, para o texto
+   estar sempre legível. Usa translate/scale para não brigar com o hover. */
+@supports (animation-timeline: view()) {
+  .project, .other, .job, .cred, .skill {
+    animation: rise linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 55%;
+  }
+  @keyframes rise {
+    from { translate: 0 32px; scale: 0.97; }
+    to { translate: 0 0; scale: 1; }
+  }
+}
+
 /* ---------- Movimento reduzido ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .project, .other, .job, .cred, .skill { animation: none !important; }
+  ::view-transition-new(root) { animation: none !important; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
 .site-footer a, p a { text-decoration: underline; text-underline-offset: 0.18em; }

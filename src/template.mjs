@@ -146,8 +146,8 @@ ${languages.length > 1 && t.lang === languages[0].lang ? `<script>/* Na página 
   <div class="wrap site-header__inner">
     <a class="brand" href="#topo">${e(t.person.name)}</a>
     <nav class="nav" id="nav" aria-label="${e(t.ui.nav.label)}" data-nav>
-      <ul>${nav.map(([h, l]) => `<li><a href="${h}">${e(l)}</a></li>`).join('')}</ul>
-      <div class="nav__theme">
+      <ul>${nav.map(([h, l], i) => `<li style="--i:${i}"><a href="${h}">${e(l)}</a></li>`).join('')}</ul>
+      <div class="nav__theme" style="--i:${nav.length}">
         <span>${e(t.ui.theme.label)}</span>
         <div class="seg" role="group" aria-label="${e(t.ui.theme.label)}">
         ${themeBtn('auto', icons.auto)}${themeBtn('light', icons.sun)}${themeBtn('dark', icons.moon)}
@@ -165,7 +165,7 @@ ${languages.length > 1 && t.lang === languages[0].lang ? `<script>/* Na página 
       </div>
       ${headerSocial}
       <button type="button" class="icon-btn nav-toggle" aria-expanded="false" aria-controls="nav" data-nav-toggle data-label-open="${e(t.ui.menu)}" data-label-close="${e(t.ui.closeMenu)}">
-        <span class="nav-toggle__open">${icons.menu}</span><span class="nav-toggle__close">${icons.close}</span><span class="sr-only" data-nav-label>${e(t.ui.menu)}</span>
+        <span class="burger" aria-hidden="true"><i></i><i></i></span><span class="sr-only" data-nav-label>${e(t.ui.menu)}</span>
       </button>
     </div>
   </div>
