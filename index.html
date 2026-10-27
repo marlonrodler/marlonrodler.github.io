@@ -1,26 +1,228 @@
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR" data-theme="auto">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marlon Rodler</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marlon Rodler · Desenvolvedor de software</title>
+<meta name="description" content="Portfólio de Marlon Rodler, desenvolvedor de software. Produtos completos em React, Node.js e Supabase, e ferramentas para desenvolvimento Salesforce.">
+<link rel="canonical" href="https://marlonrodler.github.io/">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Marlon Rodler · Desenvolvedor de software">
+<meta property="og:description" content="Portfólio de Marlon Rodler, desenvolvedor de software. Produtos completos em React, Node.js e Supabase, e ferramentas para desenvolvimento Salesforce.">
+<meta property="og:url" content="https://marlonrodler.github.io/">
+<meta property="og:image" content="https://marlonrodler.github.io/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/images/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<script>try{var m=localStorage.getItem('theme');if(m==='light'||m==='dark')document.documentElement.dataset.theme=m}catch(_){}</script>
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Marlon Rodler","jobTitle":"Desenvolvedor de software","url":"https://marlonrodler.github.io/","sameAs":["https://github.com/marlonrodler"]}</script>
 </head>
 <body>
-    <div class="card-container">
-        <div class="top">
-            <div class="image-container">
-                <img src="./images/eu.jpg" alt="" />
-            </div>
-        </div>
-
-        <div class="bottom">
-            <h3>Marlon Rodler</h3>
-            <h4>Web/Salesforce Developer</h4>
-            <p>Fique por dentro de todos os meus Projetos!</p>
-            <a href="https://marlonrodler.github.io/project-showcase/" class="btn" target="_blank" rel="noreferrer">GO!</a>
-        </div>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header" data-header>
+  <div class="wrap site-header__inner">
+    <a class="brand" href="#topo">Marlon Rodler</a>
+    <nav class="nav" id="nav" aria-label="Principal" data-nav>
+      <ul><li><a href="#projetos">Projetos</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#contato">Contato</a></li></ul>
+      
+    </nav>
+    <div class="site-header__tools">
+      <div class="seg" role="group" aria-label="Tema">
+        <button type="button" class="seg__btn" data-theme-choice="auto" aria-pressed="false" title="Automático"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor" stroke="none"/></svg><span class="sr-only">Automático</span></button><button type="button" class="seg__btn" data-theme-choice="light" aria-pressed="false" title="Claro"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 3v1.5M12 19.5V21M3 12h1.5M19.5 12H21M5.6 5.6l1.1 1.1M17.3 17.3l1.1 1.1M5.6 18.4l1.1-1.1M17.3 6.7l1.1-1.1"/></svg><span class="sr-only">Claro</span></button><button type="button" class="seg__btn" data-theme-choice="dark" aria-pressed="false" title="Escuro"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5z"/></svg><span class="sr-only">Escuro</span></button>
+      </div>
+      <a class="icon-btn" href="https://github.com/marlonrodler" target="_blank" rel="noopener noreferrer" aria-label="GitHub (abre em nova aba)"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.5a9.5 9.5 0 0 0-3 18.52c.48.09.65-.2.65-.46v-1.6c-2.64.57-3.2-1.27-3.2-1.27-.43-1.1-1.06-1.39-1.06-1.39-.86-.59.07-.58.07-.58.95.07 1.45.98 1.45.98.85 1.45 2.22 1.03 2.76.79.09-.61.33-1.03.6-1.27-2.1-.24-4.32-1.05-4.32-4.68 0-1.03.37-1.88.98-2.54-.1-.24-.42-1.2.09-2.5 0 0 .8-.26 2.62.97a9.1 9.1 0 0 1 4.77 0c1.82-1.23 2.61-.97 2.61-.97.52 1.3.2 2.26.1 2.5.6.66.98 1.51.98 2.54 0 3.64-2.22 4.44-4.33 4.67.34.3.65.88.65 1.78v2.64c0 .26.17.56.66.46A9.5 9.5 0 0 0 12 2.5z"/></svg></a>
+      <button type="button" class="icon-btn nav-toggle" aria-expanded="false" aria-controls="nav" data-nav-toggle data-label-open="Menu" data-label-close="Fechar menu">
+        <span class="nav-toggle__open"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h16M4 16h16"/></svg></span><span class="nav-toggle__close"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></span><span class="sr-only" data-nav-label>Menu</span>
+      </button>
     </div>
+  </div>
+</header>
+
+<main id="conteudo" tabindex="-1">
+  <section class="hero wrap" id="topo" aria-labelledby="hero-title">
+    <div class="hero__intro">
+      <p class="hero__who">
+        <img src="/assets/img/marlon-320.webp" width="160" height="160" alt="Foto de Marlon Rodler" fetchpriority="high">
+        <span><strong>Marlon Rodler</strong><span>Desenvolvedor de software</span></span>
+      </p>
+      <h1 id="hero-title">Construo produtos de software do começo ao fim.</h1>
+      <p class="hero__lead">Defino o problema, desenho a interface, modelo os dados e coloco no ar. No trabalho, desenvolvo em Salesforce; nos projetos próprios, uso React, Node.js e Supabase.</p>
+      <div class="hero__actions">
+        <a class="btn btn--filled btn--accent" href="#projetos">Ver projetos</a>
+        <a class="btn btn--plain" href="#contato">Entrar em contato</a>
+      </div>
+    </div>
+    <nav class="hero__index" aria-label="Projetos no ar">
+      <h2>Projetos no ar</h2>
+      <ul>
+        <li><a href="#player-ascend" class="idx idx--ascend"><span class="idx__mark" aria-hidden="true"></span><span class="idx__text"><strong>Player Ascend</strong><span>App web para jogadores de ARAM Desordem (League of Legends)</span></span></a></li><li><a href="#owldit" class="idx idx--owldit"><span class="idx__mark" aria-hidden="true"></span><span class="idx__text"><strong>Owldit</strong><span>App instalável que avisa sobre balanços de ações da B3</span></span></a></li><li><a href="#reldor" class="idx idx--reldor"><span class="idx__mark" aria-hidden="true"></span><span class="idx__text"><strong>Reldor</strong><span>Ferramenta de linha de comando e plugin de IA para desenvolvimento Salesforce</span></span></a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <section class="section" id="projetos" aria-labelledby="projetos-title">
+    <div class="wrap section__head">
+      <h2 id="projetos-title">Projetos em destaque</h2>
+      <p>Três produtos publicados, cada um nascido de um problema concreto.</p>
+      <p class="note">Telas reais do site publicado.</p>
+    </div>
+    <div class="wrap projects">
+      <article class="project project--ascend" id="player-ascend" aria-labelledby="player-ascend-title">
+    <header class="project__head">
+      <h3 id="player-ascend-title">Player Ascend</h3>
+      <p class="project__kind">App web para jogadores de ARAM Desordem (League of Legends)</p>
+      <div class="project__actions"><a class="btn btn--filled" href="https://playerascend.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir o app<svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 5h5v5"/><path d="M19 5l-8 8"/><path d="M17 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h4"/></svg><span class="sr-only"> (abre em nova aba)</span></a><span class="private"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Código privado</span></div>
+    </header>
+    <figure class="media media--combo">
+      <div class="browser">
+        <div class="browser__bar" aria-hidden="true"><span></span><span></span><span></span><em>playerascend.vercel.app</em></div>
+        <img class="browser__shot" src="/assets/img/player-ascend-desktop-800.webp" width="800" height="500" alt="Tela inicial do Player Ascend no computador, com login e a explicação de Performance Score, Ascend Points e níveis" loading="lazy" decoding="async">
+      </div>
+      <div class="phone phone--overlap"><img class="phone__shot" src="/assets/img/player-ascend-mobile-375.webp" width="375" height="812" alt="Tela de login do Player Ascend no celular, com a escada de níveis" loading="lazy" decoding="async"></div>
+    </figure>
+    <div class="project__body">
+      <dl class="project__story">
+        <div><dt>O problema</dt><dd>O ARAM Desordem não tem fila ranqueada oficial. Quem joga esse modo não tem como saber se está evoluindo de uma partida para a outra.</dd></div>
+        <div><dt>O que eu construí</dt><dd>Um agente no computador do jogador lê as partidas com o LoL aberto e envia para o site, que dá uma nota para cada partida e acompanha o progresso ao longo do tempo.</dd></div>
+      </dl>
+      <h4 class="project__sub">Destaques</h4>
+      <ul class="project__list"><li>Performance Score: uma nota de 0 a 100 por partida, que vai além do KDA.</li><li>Ascend Points e uma escada própria de 10 níveis, de Papelão a Lendário.</li><li>Comparação com amigos e placar geral só para quem ativa: por padrão, só você vê os seus dados.</li><li>Contas aprovadas à mão e inativadas após 20 dias sem uso, para caber no plano gratuito.</li></ul>
+      <div class="project__meta">
+        <div><h4 class="project__sub">Tecnologias</h4><ul class="tags"><li>React</li><li>Vite</li><li>Supabase</li><li>Vercel</li><li>Data Dragon (Riot)</li></ul></div>
+        <div><h4 class="project__sub">Minha parte</h4><p>Projeto individual: produto, interface, dados e publicação.</p></div>
+      </div>
+    </div>
+  </article>
+<article class="project project--owldit project--flip" id="owldit" aria-labelledby="owldit-title">
+    <header class="project__head">
+      <h3 id="owldit-title">Owldit</h3>
+      <p class="project__kind">App instalável que avisa sobre balanços de ações da B3</p>
+      <div class="project__actions"><a class="btn btn--filled" href="https://owldit.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir o app<svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 5h5v5"/><path d="M19 5l-8 8"/><path d="M17 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h4"/></svg><span class="sr-only"> (abre em nova aba)</span></a><span class="private"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Código privado</span></div>
+    </header>
+    <figure class="media media--phone"><div class="phone"><img class="phone__shot" src="/assets/img/owldit-mobile-375.webp" width="375" height="812" alt="Tela de entrada do Owldit no celular, com a coruja e o formulário de login" loading="lazy" decoding="async"></div></figure>
+    <div class="project__body">
+      <dl class="project__story">
+        <div><dt>O problema</dt><dd>Acompanhar balanços trimestrais e fatos relevantes de cada empresa da carteira toma tempo, e para quem não é da área nem fica claro o que olhar.</dd></div>
+        <div><dt>O que eu construí</dt><dd>Um app que acompanha as ações escolhidas e manda um aviso simples no celular ou no computador quando sai um balanço ou fato relevante. Ele avisa; não recomenda compra nem venda.</dd></div>
+      </dl>
+      <h4 class="project__sub">Destaques</h4>
+      <ul class="project__list"><li>Instalável como app (PWA), com notificações Web Push no celular e no computador.</li><li>Interface em português e inglês, com tema claro, escuro ou automático.</li></ul>
+      <div class="project__meta">
+        <div><h4 class="project__sub">Tecnologias</h4><ul class="tags"><li>React</li><li>Vite</li><li>PWA</li><li>Web Push</li><li>Supabase</li><li>Vercel</li></ul></div>
+        <div><h4 class="project__sub">Minha parte</h4><p>Projeto individual: produto, interface, dados e publicação.</p></div>
+      </div>
+    </div>
+  </article>
+<article class="project project--reldor" id="reldor" aria-labelledby="reldor-title">
+    <header class="project__head">
+      <h3 id="reldor-title">Reldor</h3>
+      <p class="project__kind">Ferramenta de linha de comando e plugin de IA para desenvolvimento Salesforce</p>
+      <div class="project__actions"><a class="btn btn--filled" href="https://github.com/marlonrodler/reldor" target="_blank" rel="noopener noreferrer">Ver o código<svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.5a9.5 9.5 0 0 0-3 18.52c.48.09.65-.2.65-.46v-1.6c-2.64.57-3.2-1.27-3.2-1.27-.43-1.1-1.06-1.39-1.06-1.39-.86-.59.07-.58.07-.58.95.07 1.45.98 1.45.98.85 1.45 2.22 1.03 2.76.79.09-.61.33-1.03.6-1.27-2.1-.24-4.32-1.05-4.32-4.68 0-1.03.37-1.88.98-2.54-.1-.24-.42-1.2.09-2.5 0 0 .8-.26 2.62.97a9.1 9.1 0 0 1 4.77 0c1.82-1.23 2.61-.97 2.61-.97.52 1.3.2 2.26.1 2.5.6.66.98 1.51.98 2.54 0 3.64-2.22 4.44-4.33 4.67.34.3.65.88.65 1.78v2.64c0 .26.17.56.66.46A9.5 9.5 0 0 0 12 2.5z"/></svg><span class="sr-only"> (abre em nova aba)</span></a></div>
+    </header>
+    <figure class="media media--terminal">
+      <div class="terminal" role="img" aria-label="Como o Reldor funciona: Você fala, a IA, com a skill do Reldor, roda o comando reldor, scripts leem o índice do projeto, o comando devolve fatos em JSON, a IA explica o resultado">
+        <div class="terminal__bar" aria-hidden="true"><span></span><span></span><span></span><em>Como o Reldor funciona</em></div>
+        <ol class="terminal__flow" aria-hidden="true">
+          <li class="flow--you"><b>›</b>Você fala</li><li class="flow--arrow"><b>→</b>a IA, com a skill do Reldor</li><li class="flow--arrow"><b>→</b>roda o comando reldor</li><li class="flow--arrow"><b>→</b>scripts leem o índice do projeto</li><li class="flow--back"><b>←</b>o comando devolve fatos em JSON</li><li class="flow--back"><b>←</b>a IA explica o resultado</li>
+        </ol>
+      </div>
+      <figcaption>Só lê metadados, nunca registros, e roda na máquina de quem usa.</figcaption>
+    </figure>
+    <div class="project__body">
+      <dl class="project__story">
+        <div><dt>O problema</dt><dd>A IA escreve código Salesforce rápido, mas não enxerga a org inteira: o flow que roda antes da trigger, a regra que quebra o teste de outro time. E o Git compara linhas, não itens de metadado, então dois devs no mesmo profile viram conflito.</dd></div>
+        <div><dt>O que eu construí</dt><dd>Um comando que monta um índice do projeto e calcula esses fatos com scripts, e um plugin que ensina a IA (Kiro ou Claude Code) a usar o comando. Quem descobre os fatos é o script, não a IA, por isso as respostas se repetem.</dd></div>
+      </dl>
+      <h4 class="project__sub">Destaques</h4>
+      <ul class="project__list"><li>Mostra o que acontece quando um registro é salvo, na ordem real de execução.</li><li>Merge item a item de profiles e permission sets, sem conflito falso.</li><li>Commit limpo: separa o seu trabalho do que veio da org no retrieve.</li><li>Não executa nada no Git nem na org: confere e entrega os comandos prontos.</li><li>107 testes rodando no GitHub Actions, em Windows e Ubuntu, com Node 18 e 22.</li></ul>
+      <div class="project__meta">
+        <div><h4 class="project__sub">Tecnologias</h4><ul class="tags"><li>Node.js</li><li>MCP</li><li>GitHub Actions</li><li>Salesforce CLI</li></ul></div>
+        <div><h4 class="project__sub">Minha parte</h4><p>Projeto individual: design da ferramenta, código, testes e documentação.</p></div>
+      </div>
+    </div>
+  </article>
+    </div>
+  </section>
+
+  <section class="section" id="outros" aria-labelledby="outros-title">
+    <div class="wrap section__head">
+      <h2 id="outros-title">Outros projetos</h2>
+      <p>Projetos de estudo em React, anteriores ao uso de IA no meu fluxo. Estão passando por uma modernização de visual, desempenho e acessibilidade.</p>
+    </div>
+    <div class="wrap"><ul class="others"><li class="other">
+    <div class="other__main">
+      <h3>Typing Speed</h3>
+      <p>Jogo de digitação em português: cada palavra certa soma pontos e segundos no relógio.</p>
+    </div>
+    <div class="other__side">
+      <span class="status">Em modernização</span>
+      <span class="other__links">
+        <a class="link" href="https://marlonrodler.github.io/typing-speed/" target="_blank" rel="noopener noreferrer">Abrir o app<svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 5h5v5"/><path d="M19 5l-8 8"/><path d="M17 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h4"/></svg><span class="sr-only"> (abre em nova aba)</span></a>
+        <a class="link" href="https://github.com/marlonrodler/typing-speed" target="_blank" rel="noopener noreferrer">Ver o código<svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.5a9.5 9.5 0 0 0-3 18.52c.48.09.65-.2.65-.46v-1.6c-2.64.57-3.2-1.27-3.2-1.27-.43-1.1-1.06-1.39-1.06-1.39-.86-.59.07-.58.07-.58.95.07 1.45.98 1.45.98.85 1.45 2.22 1.03 2.76.79.09-.61.33-1.03.6-1.27-2.1-.24-4.32-1.05-4.32-4.68 0-1.03.37-1.88.98-2.54-.1-.24-.42-1.2.09-2.5 0 0 .8-.26 2.62.97a9.1 9.1 0 0 1 4.77 0c1.82-1.23 2.61-.97 2.61-.97.52 1.3.2 2.26.1 2.5.6.66.98 1.51.98 2.54 0 3.64-2.22 4.44-4.33 4.67.34.3.65.88.65 1.78v2.64c0 .26.17.56.66.46A9.5 9.5 0 0 0 12 2.5z"/></svg><span class="sr-only"> (abre em nova aba)</span></a>
+      </span>
+    </div>
+  </li><li class="other">
+    <div class="other__main">
+      <h3>Champions Challenge</h3>
+      <p>Desafio para acertar o nome de todos os campeões de League of Legends antes de o tempo acabar.</p>
+    </div>
+    <div class="other__side">
+      <span class="status">Em modernização</span>
+      <span class="other__links">
+        <a class="link" href="https://marlonrodler.github.io/leagueoflegends-game/" target="_blank" rel="noopener noreferrer">Abrir o app<svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 5h5v5"/><path d="M19 5l-8 8"/><path d="M17 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h4"/></svg><span class="sr-only"> (abre em nova aba)</span></a>
+        <a class="link" href="https://github.com/marlonrodler/leagueoflegends-game" target="_blank" rel="noopener noreferrer">Ver o código<svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.5a9.5 9.5 0 0 0-3 18.52c.48.09.65-.2.65-.46v-1.6c-2.64.57-3.2-1.27-3.2-1.27-.43-1.1-1.06-1.39-1.06-1.39-.86-.59.07-.58.07-.58.95.07 1.45.98 1.45.98.85 1.45 2.22 1.03 2.76.79.09-.61.33-1.03.6-1.27-2.1-.24-4.32-1.05-4.32-4.68 0-1.03.37-1.88.98-2.54-.1-.24-.42-1.2.09-2.5 0 0 .8-.26 2.62.97a9.1 9.1 0 0 1 4.77 0c1.82-1.23 2.61-.97 2.61-.97.52 1.3.2 2.26.1 2.5.6.66.98 1.51.98 2.54 0 3.64-2.22 4.44-4.33 4.67.34.3.65.88.65 1.78v2.64c0 .26.17.56.66.46A9.5 9.5 0 0 0 12 2.5z"/></svg><span class="sr-only"> (abre em nova aba)</span></a>
+      </span>
+    </div>
+  </li><li class="other">
+    <div class="other__main">
+      <h3>Pokédex</h3>
+      <p>Busca de Pokémon por nome ou número, com os dados da PokéAPI.</p>
+    </div>
+    <div class="other__side">
+      <span class="status">Em modernização</span>
+      <span class="other__links">
+        <a class="link" href="https://marlonrodler.github.io/pokedex-react/" target="_blank" rel="noopener noreferrer">Abrir o app<svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 5h5v5"/><path d="M19 5l-8 8"/><path d="M17 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h4"/></svg><span class="sr-only"> (abre em nova aba)</span></a>
+        <a class="link" href="https://github.com/marlonrodler/pokedex-react" target="_blank" rel="noopener noreferrer">Ver o código<svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.5a9.5 9.5 0 0 0-3 18.52c.48.09.65-.2.65-.46v-1.6c-2.64.57-3.2-1.27-3.2-1.27-.43-1.1-1.06-1.39-1.06-1.39-.86-.59.07-.58.07-.58.95.07 1.45.98 1.45.98.85 1.45 2.22 1.03 2.76.79.09-.61.33-1.03.6-1.27-2.1-.24-4.32-1.05-4.32-4.68 0-1.03.37-1.88.98-2.54-.1-.24-.42-1.2.09-2.5 0 0 .8-.26 2.62.97a9.1 9.1 0 0 1 4.77 0c1.82-1.23 2.61-.97 2.61-.97.52 1.3.2 2.26.1 2.5.6.66.98 1.51.98 2.54 0 3.64-2.22 4.44-4.33 4.67.34.3.65.88.65 1.78v2.64c0 .26.17.56.66.46A9.5 9.5 0 0 0 12 2.5z"/></svg><span class="sr-only"> (abre em nova aba)</span></a>
+      </span>
+    </div>
+  </li></ul></div>
+  </section>
+
+  <section class="section wrap about" id="sobre" aria-labelledby="sobre-title">
+    <div class="about__text">
+      <h2 id="sobre-title">Sobre</h2>
+      <p>Sou desenvolvedor de software. No dia a dia, trabalho com desenvolvimento Salesforce: Apex, Lightning Web Components e o fluxo de entrega entre ambientes.</p><p>Fora do trabalho, construo produtos próprios do começo ao fim. Começo pelo problema de quem vai usar, desenho a interface, modelo os dados e publico. Dou atenção especial ao que evita erro humano: regras que o sistema confere sozinho, textos que explicam o próximo passo, telas que funcionam bem no celular.</p>
+    </div>
+    <div class="about__skills">
+      <h2 class="h3">O que eu uso</h2>
+      <p class="muted">Agrupado pelo que resolve, com o projeto onde aparece.</p>
+      <dl class="skills">
+        <div class="skill"><dt>Interfaces</dt><dd><span>React, Vite, HTML e CSS acessíveis, PWA</span><small>Player Ascend, Owldit</small></dd></div><div class="skill"><dt>Dados e servidor</dt><dd><span>Supabase (Postgres e autenticação), Node.js, Web Push</span><small>Player Ascend, Owldit, Reldor</small></dd></div><div class="skill"><dt>Salesforce</dt><dd><span>Apex, Lightning Web Components, Salesforce CLI, fflib</span><small>Trabalho e Reldor</small></dd></div><div class="skill"><dt>Qualidade e entrega</dt><dd><span>Git, GitHub Actions, Testes automatizados, Vercel, GitHub Pages</span><small>Reldor e todos os sites</small></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section wrap contact" id="contato" aria-labelledby="contato-title">
+    <h2 id="contato-title">Contato</h2>
+    <p>Para conversar sobre uma vaga, um projeto ou algum dos produtos, me chame por aqui.</p>
+    <ul class="contact__links"><li><a class="contact-link" href="https://github.com/marlonrodler" target="_blank" rel="noopener noreferrer">GitHub<svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.5a9.5 9.5 0 0 0-3 18.52c.48.09.65-.2.65-.46v-1.6c-2.64.57-3.2-1.27-3.2-1.27-.43-1.1-1.06-1.39-1.06-1.39-.86-.59.07-.58.07-.58.95.07 1.45.98 1.45.98.85 1.45 2.22 1.03 2.76.79.09-.61.33-1.03.6-1.27-2.1-.24-4.32-1.05-4.32-4.68 0-1.03.37-1.88.98-2.54-.1-.24-.42-1.2.09-2.5 0 0 .8-.26 2.62.97a9.1 9.1 0 0 1 4.77 0c1.82-1.23 2.61-.97 2.61-.97.52 1.3.2 2.26.1 2.5.6.66.98 1.51.98 2.54 0 3.64-2.22 4.44-4.33 4.67.34.3.65.88.65 1.78v2.64c0 .26.17.56.66.46A9.5 9.5 0 0 0 12 2.5z"/></svg><span class="sr-only"> (abre em nova aba)</span></a></li></ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p>© <span data-year>2026</span> Marlon Rodler</p>
+    <p>Site estático feito à mão: HTML, CSS e um pouco de JavaScript. <a href="https://github.com/marlonrodler/marlonrodler.github.io" target="_blank" rel="noopener noreferrer">Código do site<span class="sr-only"> (abre em nova aba)</span></a></p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

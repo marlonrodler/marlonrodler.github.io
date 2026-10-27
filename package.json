@@ -1,0 +1,10 @@
+{
+  "name": "marlonrodler.github.io",
+  "private": true,
+  "type": "module",
+  "description": "Portfólio de Marlon Rodler",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs && python3 -m http.server 8080"
+  }
+}
