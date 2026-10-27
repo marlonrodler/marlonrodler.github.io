@@ -339,20 +339,15 @@ main:focus { outline: none; }
 .media--terminal figcaption { margin-top: var(--s-4); color: var(--p-ink-3); font-size: 0.9375rem; }
 
 /* ---------- Outros projetos ---------- */
-.others { border-top: 1px solid var(--line); }
-.other { display: grid; gap: var(--s-3); padding-block: var(--s-5); border-bottom: 1px solid var(--line); }
-@media (min-width: 760px) {
-  .other { grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: var(--s-6); }
-}
+.others { display: grid; gap: var(--s-5); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 700px) { .others { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.other { display: grid; grid-template-rows: auto 1fr; border-radius: 20px; overflow: hidden; background: var(--bg-2); }
+.other__shot { width: 100%; aspect-ratio: 640 / 422; object-fit: cover; border-bottom: 1px solid var(--line); }
+.other__body { display: grid; align-content: start; gap: var(--s-3); padding: var(--s-5); }
 .other h3 { font-size: var(--step-1); font-weight: 600; letter-spacing: -0.02em; }
-.other p { color: var(--ink-2); margin-top: 2px; }
-.other__side { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2) var(--s-5); }
-.other__links { display: inline-flex; gap: var(--s-5); }
-.status {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: var(--step--1); font-weight: 500; color: var(--ink-3); letter-spacing: 0;
-}
-.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #ff9f0a; }
+.other p { color: var(--ink-2); }
+.other .tags { --tag-bg: var(--bg); }
+.other__links { display: flex; flex-wrap: wrap; gap: 0 var(--s-5); margin-top: auto; }
 
 /* ---------- Sobre e competências ---------- */
 .about { display: grid; gap: var(--s-8); }

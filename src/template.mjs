@@ -71,12 +71,11 @@ function project(p, t, i) {
 
 function other(o, t) {
   return `<li class="other">
-    <div class="other__main">
+    ${o.image ? `<img class="other__shot" src="${e(o.image.src)}" width="${o.image.w}" height="${o.image.h}" alt="${e(o.image.alt)}" loading="lazy" decoding="async">` : ''}
+    <div class="other__body">
       <h3>${e(o.name)}</h3>
       <p>${e(o.summary)}</p>
-    </div>
-    <div class="other__side">
-      <span class="status">${e(o.status)}</span>
+      ${tags(o.stack)}
       <span class="other__links">
         ${ext(o.links.app, t.ui.openApp, t, 'link')}
         ${ext(o.links.code, t.ui.viewCode, t, 'link', icons.github)}

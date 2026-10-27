@@ -146,27 +146,27 @@ export default {
 
   othersTitle: 'Outros projetos',
   othersLead:
-    'Projetos de estudo em React, anteriores ao uso de IA no meu fluxo. Estão passando por uma modernização de visual, desempenho e acessibilidade.',
+    'Projetos de estudo em React de 2023, feitos antes de eu usar IA no meu fluxo. Em 2026 ganharam visual novo, correções e testes.',
   others: [
     {
       name: 'Typing Speed',
       summary: 'Jogo de digitação em português: cada palavra certa soma pontos e segundos no relógio.',
-      stack: ['React'],
-      status: 'Em modernização',
+      stack: ['React', 'Vite'],
+      image: { src: '/assets/img/typing-speed-640.webp', w: 640, h: 422, alt: 'Partida do Typing Speed com tempo, pontos e quatro palavras para digitar' },
       links: { app: 'https://marlonrodler.github.io/typing-speed/', code: 'https://github.com/marlonrodler/typing-speed' },
     },
     {
       name: 'Champions Challenge',
       summary: 'Desafio para acertar o nome de todos os campeões de League of Legends antes que o tempo acabe.',
-      stack: ['React'],
-      status: 'Em modernização',
+      stack: ['React', 'Vite', 'Data Dragon'],
+      image: { src: '/assets/img/champions-challenge-640.webp', w: 640, h: 422, alt: 'Partida do Champions Challenge com cartas de campeões e o placar de acertos' },
       links: { app: 'https://marlonrodler.github.io/leagueoflegends-game/', code: 'https://github.com/marlonrodler/leagueoflegends-game' },
     },
     {
       name: 'Pokédex',
-      summary: 'Busca de Pokémon por nome ou número, com os dados da PokéAPI.',
-      stack: ['React'],
-      status: 'Em modernização',
+      summary: 'Busca de Pokémon por nome ou número, com tipos, atributos e descrição da PokéAPI.',
+      stack: ['React', 'Vite', 'PokéAPI'],
+      image: { src: '/assets/img/pokedex-640.webp', w: 640, h: 422, alt: 'Pokédex vermelha mostrando o Charizard na tela' },
       links: { app: 'https://marlonrodler.github.io/pokedex-react/', code: 'https://github.com/marlonrodler/pokedex-react' },
     },
   ],
