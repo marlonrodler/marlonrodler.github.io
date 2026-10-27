@@ -17,14 +17,16 @@ export default {
   person: {
     name: 'Marlon Rodler',
     role: 'Desenvolvedor de software',
-    photo: { src: '/assets/img/marlon-320.webp', alt: 'Foto de Marlon Rodler' },
+    // Para usar uma foto: coloque o arquivo em assets/img/ e preencha, ex.:
+    // photo: { src: '/assets/img/marlon-320.webp', alt: 'Foto de Marlon Rodler' },
+    photo: null,
   },
 
   // Deixe null o que ainda não tem; o site esconde o link.
   links: {
     github: 'https://github.com/marlonrodler',
-    linkedin: null, // ex.: 'https://www.linkedin.com/in/seu-perfil/'
-    email: null, // ex.: 'voce@exemplo.com'
+    linkedin: 'https://www.linkedin.com/in/marlonrodler/',
+    email: null, // ex.: 'voce@exemplo.com' (deixe null para não mostrar)
   },
 
   ui: {
@@ -155,7 +157,7 @@ export default {
     },
     {
       name: 'Champions Challenge',
-      summary: 'Desafio para acertar o nome de todos os campeões de League of Legends antes de o tempo acabar.',
+      summary: 'Desafio para acertar o nome de todos os campeões de League of Legends antes que o tempo acabe.',
       stack: ['React'],
       status: 'Em modernização',
       links: { app: 'https://marlonrodler.github.io/leagueoflegends-game/', code: 'https://github.com/marlonrodler/leagueoflegends-game' },
@@ -188,7 +190,7 @@ export default {
 
   contact: {
     title: 'Contato',
-    lead: 'Para conversar sobre uma vaga, um projeto ou algum dos produtos, me chame por aqui.',
+    lead: 'Para conversar sobre uma vaga, um projeto ou algum dos produtos, me chame no LinkedIn.',
     github: 'GitHub',
     linkedin: 'LinkedIn',
     email: 'E-mail',

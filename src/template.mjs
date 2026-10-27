@@ -88,8 +88,8 @@ function other(o, t) {
 export function render(t) {
   const L = t.links;
   const contactLinks = [
-    L.github && `<li>${ext(L.github, t.contact.github, t, 'contact-link', icons.github)}</li>`,
     L.linkedin && `<li>${ext(L.linkedin, t.contact.linkedin, t, 'contact-link', icons.linkedin)}</li>`,
+    L.github && `<li>${ext(L.github, t.contact.github, t, 'contact-link', icons.github)}</li>`,
     L.email && `<li><a class="contact-link" href="mailto:${e(L.email)}">${e(t.contact.email)}${icons.mail}<span class="contact-link__detail">${e(L.email)}</span></a></li>`,
   ].filter(Boolean).join('');
   const headerSocial = [
@@ -163,7 +163,7 @@ export function render(t) {
   <section class="hero wrap" id="topo" aria-labelledby="hero-title">
     <div class="hero__intro">
       <p class="hero__who">
-        <img src="${e(t.person.photo.src)}" width="160" height="160" alt="${e(t.person.photo.alt)}" fetchpriority="high">
+        ${t.person.photo ? `<img src="${e(t.person.photo.src)}" width="160" height="160" alt="${e(t.person.photo.alt)}" fetchpriority="high">` : ''}
         <span><strong>${e(t.person.name)}</strong><span>${e(t.person.role)}</span></span>
       </p>
       <h1 id="hero-title">${e(t.hero.title)}</h1>
