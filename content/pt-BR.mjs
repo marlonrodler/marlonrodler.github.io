@@ -18,7 +18,7 @@ export default {
     name: 'Marlon Rodler',
     role: 'Desenvolvedor de software',
     // Foto recortada, com fundo transparente (o círculo atrás vem do CSS). Use null para esconder.
-    photo: { src: '/assets/img/marlon-200.webp', alt: 'Foto de Marlon Rodler' },
+    photo: { src: '/assets/img/marlon-160.webp', alt: 'Foto de Marlon Rodler' },
   },
 
   // Deixe null o que ainda não tem; o site esconde o link.
