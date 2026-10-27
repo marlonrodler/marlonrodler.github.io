@@ -49,8 +49,9 @@ function project(p, t, i) {
   ].join('');
   return `<article class="project project--${e(p.theme)}${i % 2 ? ' project--flip' : ''}" id="${e(p.id)}" aria-labelledby="${e(p.id)}-title">
     <header class="project__head">
-      <h3 id="${e(p.id)}-title">${e(p.name)}</h3>
+      <h3 id="${e(p.id)}-title">${e(p.name)}${p.status ? ` <span class="project__status" title="${e(t.ui.statusHint?.[p.status] ?? '')}">${e(p.status)}</span>` : ''}</h3>
       <p class="project__kind">${e(p.kind)}</p>
+      ${p.status && t.ui.statusHint?.[p.status] ? `<p class="project__status-hint">${e(t.ui.statusHint[p.status])}</p>` : ''}
       <div class="project__actions">${links}</div>
     </header>
     ${media(p)}

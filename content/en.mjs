@@ -42,13 +42,14 @@ export default {
     stack: 'Technologies',
     role: 'My role',
     screenshotNote: 'Images are real screens from the published sites.',
+    statusHint: { Beta: 'Live and being tested with real users. New accounts are approved manually.' },
     newTab: '(opens in a new tab)',
     footer: 'Hand-built site, with HTML, CSS and a little JavaScript.',
     footerCode: 'Site source code',
   },
 
   hero: {
-    title: 'I develop on Salesforce and build web apps, from idea to launch.',
+    title: 'I develop on the Salesforce platform and build web apps, from idea to launch.',
     lead:
       'For over 5 years I’ve worked on the Salesforce platform, building with Apex, Lightning Web Components, Flow and integrations. In my own projects, I build complete apps with React, Node.js and Supabase.',
     primary: 'See projects',
@@ -63,6 +64,7 @@ export default {
     {
       id: 'player-ascend',
       name: 'Player Ascend',
+      status: 'Beta',
       kind: 'Web app for players of ARAM Mayhem, a League of Legends mode',
       theme: 'ascend',
       problem:
@@ -88,6 +90,7 @@ export default {
     {
       id: 'owldit',
       name: 'Owldit',
+      status: 'Beta',
       kind: 'App that alerts you when earnings reports come out for your Brazilian stocks',
       theme: 'owldit',
       problem:
@@ -109,10 +112,10 @@ export default {
     {
       id: 'reldor',
       name: 'Reldor',
-      kind: 'Command-line tool with an AI plugin for Salesforce developers',
+      kind: 'Command-line tool with an AI plugin for developers working on the Salesforce platform',
       theme: 'reldor',
       problem:
-        'AI writes Salesforce code fast, but it can’t see the whole org: the flow that runs before the trigger, the rule that breaks another team’s test. On top of that, Git compares lines, not metadata items, so two developers editing the same profile end up in a conflict.',
+        'AI writes code for the Salesforce platform fast, but it can’t see the whole org: the flow that runs before the trigger, the rule that breaks another team’s test. On top of that, Git compares lines, not metadata items, so two developers editing the same profile end up in a conflict.',
       solution:
         'A command that builds an index of the project and works out those facts with scripts, plus a plugin that teaches the AI (Kiro or Claude Code) to use that command. The script finds the facts, not the AI, so the answer is always the same.',
       highlights: [

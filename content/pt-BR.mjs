@@ -45,13 +45,14 @@ export default {
     stack: 'Tecnologias',
     role: 'Minha participação',
     screenshotNote: 'As imagens são telas reais dos sites publicados.',
+    statusHint: { Beta: 'No ar, em teste com usuários reais. Novas contas são aprovadas manualmente.' },
     newTab: '(abre em nova aba)',
     footer: 'Site feito à mão, com HTML, CSS e um pouco de JavaScript.',
     footerCode: 'Código do site',
   },
 
   hero: {
-    title: 'Desenvolvo em Salesforce e crio aplicações web, da ideia ao lançamento.',
+    title: 'Desenvolvo na plataforma Salesforce e crio aplicações web, da ideia ao lançamento.',
     lead:
       'Há mais de 5 anos trabalho com a plataforma Salesforce, desenvolvendo com Apex, Lightning Web Components, Flow e integrações. Nos meus projetos, crio aplicações completas com React, Node.js e Supabase.',
     primary: 'Ver projetos',
@@ -66,6 +67,7 @@ export default {
     {
       id: 'player-ascend',
       name: 'Player Ascend',
+      status: 'Beta',
       kind: 'Aplicativo web para quem joga ARAM Desordem, de League of Legends',
       theme: 'ascend',
       problem:
@@ -91,6 +93,7 @@ export default {
     {
       id: 'owldit',
       name: 'Owldit',
+      status: 'Beta',
       kind: 'Aplicativo que avisa quando saem os balanços das suas ações da B3',
       theme: 'owldit',
       problem:
@@ -112,10 +115,10 @@ export default {
     {
       id: 'reldor',
       name: 'Reldor',
-      kind: 'Ferramenta de linha de comando, com plugin de IA, para quem desenvolve em Salesforce',
+      kind: 'Ferramenta de linha de comando, com plugin de IA, para quem desenvolve na plataforma Salesforce',
       theme: 'reldor',
       problem:
-        'A IA escreve código Salesforce rápido, mas não enxerga a org inteira: o flow que roda antes da trigger, a regra que quebra o teste de outro time. Além disso, o Git compara linhas, e não itens de metadado. Dois desenvolvedores mexendo no mesmo profile acabam em conflito.',
+        'A IA escreve código para a plataforma Salesforce rápido, mas não enxerga a org inteira: o flow que roda antes da trigger, a regra que quebra o teste de outro time. Além disso, o Git compara linhas, e não itens de metadado. Dois desenvolvedores mexendo no mesmo profile acabam em conflito.',
       solution:
         'Um comando que monta um índice do projeto e levanta esses fatos com scripts, mais um plugin que ensina a IA (Kiro ou Claude Code) a usar esse comando. Quem descobre os fatos é o script, não a IA, então a resposta é sempre a mesma.',
       highlights: [
