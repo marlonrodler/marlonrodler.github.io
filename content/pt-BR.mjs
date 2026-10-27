@@ -17,9 +17,8 @@ export default {
   person: {
     name: 'Marlon Rodler',
     role: 'Desenvolvedor de software',
-    // Para usar uma foto: coloque o arquivo em assets/img/ e preencha, ex.:
-    // photo: { src: '/assets/img/marlon-320.webp', alt: 'Foto de Marlon Rodler' },
-    photo: null,
+    // Foto recortada, com fundo transparente (o círculo atrás vem do CSS). Use null para esconder.
+    photo: { src: '/assets/img/marlon-200.webp', alt: 'Foto de Marlon Rodler' },
   },
 
   // Deixe null o que ainda não tem; o site esconde o link.
@@ -190,7 +189,7 @@ export default {
 
   contact: {
     title: 'Contato',
-    lead: 'Para conversar sobre uma vaga, um projeto ou algum dos produtos, me chame no LinkedIn.',
+    lead: 'Tem uma vaga de desenvolvedor ou quer conversar sobre algum dos meus projetos? Me chame no LinkedIn.',
     github: 'GitHub',
     linkedin: 'LinkedIn',
     email: 'E-mail',

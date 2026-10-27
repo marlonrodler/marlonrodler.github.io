@@ -162,7 +162,7 @@ export function render(t) {
   <section class="hero wrap" id="topo" aria-labelledby="hero-title">
     <div class="hero__intro">
       <p class="hero__who">
-        ${t.person.photo ? `<img src="${e(t.person.photo.src)}" width="160" height="160" alt="${e(t.person.photo.alt)}" fetchpriority="high">` : ''}
+        ${t.person.photo ? `<img src="${e(t.person.photo.src)}" width="200" height="200" alt="${e(t.person.photo.alt)}" fetchpriority="high">` : ''}
         <span><strong>${e(t.person.name)}</strong><span>${e(t.person.role)}</span></span>
       </p>
       <h1 id="hero-title">${e(t.hero.title)}</h1>
