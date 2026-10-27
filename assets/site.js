@@ -33,7 +33,7 @@
   document.addEventListener('keydown', (ev) => {
     if (ev.key === 'Escape' && root.classList.contains('nav-open')) { setOpen(false); toggle.focus(); }
   });
-  matchMedia('(min-width: 760px)').addEventListener('change', (m) => { if (m.matches) setOpen(false); });
+  matchMedia('(min-width: 960px)').addEventListener('change', (m) => { if (m.matches) setOpen(false); });
 
   // Linha sob o cabeçalho só depois de rolar
   const header = document.querySelector('[data-header]');

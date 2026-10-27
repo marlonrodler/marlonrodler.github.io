@@ -8,16 +8,16 @@ export default {
   label: 'Português',
   path: '/', // onde a página é publicada
   meta: {
-    title: 'Marlon Rodler · Desenvolvedor de software',
+    title: 'Marlon Rodler · Desenvolvedor Salesforce',
     description:
-      'Portfólio de Marlon Rodler, desenvolvedor de software. Aplicações web completas com React, Node.js e Supabase, e ferramentas para quem desenvolve em Salesforce.',
+      'Portfólio de Marlon Rodler, desenvolvedor Salesforce com 6 certificações. Apex, LWC, Flow e integrações no trabalho; aplicações web completas com React, Node.js e Supabase nos projetos próprios.',
     url: 'https://marlonrodler.github.io/',
     image: 'https://marlonrodler.github.io/assets/img/og.png',
   },
 
   person: {
     name: 'Marlon Rodler',
-    role: 'Desenvolvedor de software',
+    role: 'Desenvolvedor Salesforce · 6x certificado',
     // Foto recortada, com fundo transparente (o círculo atrás vem do CSS). Use null para esconder.
     photo: { src: '/assets/img/marlon-160.webp', alt: 'Foto de Marlon Rodler' },
   },
@@ -31,7 +31,7 @@ export default {
 
   ui: {
     skip: 'Pular para o conteúdo',
-    nav: { label: 'Principal', projects: 'Projetos', about: 'Sobre', contact: 'Contato' },
+    nav: { label: 'Principal', projects: 'Projetos', experience: 'Experiência', about: 'Sobre', contact: 'Contato' },
     menu: 'Menu',
     closeMenu: 'Fechar menu',
     theme: { label: 'Tema', auto: 'Automático', light: 'Claro', dark: 'Escuro' },
@@ -51,9 +51,9 @@ export default {
   },
 
   hero: {
-    title: 'Desenvolvo aplicações web, da ideia ao lançamento.',
+    title: 'Desenvolvo em Salesforce e crio aplicações web, da ideia ao lançamento.',
     lead:
-      'Entendo o problema, desenho as telas, monto o banco de dados e coloco no ar. No trabalho, desenvolvo em Salesforce. Nos meus projetos, uso React, Node.js e Supabase.',
+      'Há mais de 5 anos trabalho com a plataforma Salesforce, desenvolvendo com Apex, Lightning Web Components, Flow e integrações. Nos meus projetos, crio aplicações completas com React, Node.js e Supabase.',
     primary: 'Ver projetos',
     secondary: 'Entrar em contato',
     indexTitle: 'Projetos publicados',
@@ -144,6 +144,69 @@ export default {
     },
   ],
 
+  experienceTitle: 'Experiência',
+  experienceLead: 'Mais de 5 anos desenvolvendo na plataforma Salesforce, em projetos para grandes clientes dos setores financeiro, varejo e industrial.',
+  experience: [
+    {
+      role: 'Desenvolvedor Salesforce',
+      company: 'Ília Digital',
+      period: 'mai. 2024 – atual',
+      current: true,
+      points: [
+        'Desenvolvo em Apex (triggers, batches, schedules e integrações) e crio componentes em Lightning Web Components.',
+        'Organizo o código com o framework fflib e os princípios SOLID, para facilitar a manutenção e os testes.',
+        'Cuido da modelagem de dados e da segurança, participo da definição de requisitos com o negócio e ajudo a espalhar boas práticas no time.',
+      ],
+      tags: ['Apex', 'LWC', 'fflib', 'SOLID', 'Integrações'],
+    },
+    {
+      role: 'Desenvolvedor Salesforce',
+      company: 'Nescara',
+      period: 'jan. 2022 – mai. 2024',
+      points: [
+        'Desenvolvi em Apex, com classes, triggers, batches, schedules e integrações.',
+        'Criei componentes em Aura e Lightning Web Components.',
+        'Fiz deploys em produção e versionei o trabalho com Salesforce DX e scratch orgs.',
+      ],
+      tags: ['Apex', 'Aura', 'LWC', 'Salesforce DX'],
+    },
+    {
+      role: 'Desenvolvedor Salesforce',
+      company: 'C3C Software',
+      period: 'abr. 2021 – jan. 2022',
+      points: [
+        'Desenvolvi em Apex com orientação a objetos e SOLID: triggers, batches, schedules e integrações.',
+        'Criei componentes em Aura e LWC e fiz deploys em produção.',
+        'Desenhei soluções técnicas, repassei para o time e treinei quem estava chegando.',
+      ],
+      tags: ['Apex', 'Aura', 'LWC'],
+    },
+    {
+      role: 'Desenvolvedor web back-end',
+      company: 'SRVCloud',
+      period: 'ago. 2020 – mar. 2021',
+      points: ['Criei e mantive web services, com orientação a objetos e versionamento no Git.'],
+      tags: ['Web services', 'Git'],
+    },
+  ],
+  certificationsTitle: '6 certificações Salesforce',
+  certifications: [
+    'Platform Developer II',
+    'Platform Developer I',
+    'JavaScript Developer I',
+    'Platform App Builder',
+    'Administrator',
+    'Associate',
+  ],
+  certificationsLink: { label: 'Ver no Trailblazer', href: 'https://trailblazer.me/id/marlonrodler' },
+  otherCertifications: 'Também: Scrum Foundation.',
+  educationTitle: 'Formação',
+  education: [
+    { course: 'Tecnólogo em Análise e Desenvolvimento de Sistemas', school: 'FATEC São Paulo', period: '2018 – 2021' },
+    { course: 'Formação Salesforce', school: 'Pragma School', period: '2020 – 2021' },
+    { course: 'Técnico em Informática', school: 'ETEC', period: '2017 – 2018' },
+  ],
+
   othersTitle: 'Outros projetos',
   othersLead:
     'Projetos de estudo em React, feitos em 2023, antes de eu usar IA no dia a dia. Em 2026, ganharam visual novo, correções e testes.',
@@ -174,8 +237,9 @@ export default {
   about: {
     title: 'Sobre',
     paragraphs: [
-      'Sou desenvolvedor de software. No trabalho, desenvolvo em Salesforce: Apex, Lightning Web Components e o processo de entrega entre os ambientes.',
-      'Nas horas livres, crio meus próprios projetos do zero até o lançamento. Começo entendendo o problema de quem vai usar, desenho as telas, monto o banco de dados e publico. Cuido principalmente do que evita erro: regras que o próprio sistema confere, textos que explicam o próximo passo e telas que funcionam bem no celular.',
+      'Sou desenvolvedor Salesforce e crio soluções escaláveis com Apex, Lightning Web Components e integrações com sistemas externos, sempre pensando em desempenho, facilidade de manutenção e resultado para o negócio.',
+      'Tenho experiência em projetos complexos, com processamento assíncrono, modelagem de dados e integrações via API. Além do código, uso bastante as ferramentas low-code da plataforma, principalmente o Flow Builder, seguindo as boas práticas da Salesforce.',
+      'Nas horas livres, crio meus próprios projetos do zero até o lançamento: entendo o problema de quem vai usar, desenho as telas, monto o banco de dados e publico.',
     ],
   },
 
@@ -184,7 +248,7 @@ export default {
   skills: [
     { group: 'Telas e interfaces', items: ['React', 'Vite', 'HTML e CSS com acessibilidade', 'PWA'], where: 'Player Ascend e Owldit' },
     { group: 'Banco de dados e servidor', items: ['Supabase (Postgres e login)', 'Node.js', 'Web Push'], where: 'Player Ascend, Owldit e Reldor' },
-    { group: 'Salesforce', items: ['Apex', 'Lightning Web Components', 'Salesforce CLI', 'fflib'], where: 'No trabalho e no Reldor' },
+    { group: 'Salesforce', items: ['Apex', 'Lightning Web Components', 'Aura', 'SOQL', 'Flow Builder', 'Integrações via API', 'fflib', 'Salesforce DX e CLI'], where: 'No trabalho e no Reldor' },
     { group: 'Qualidade e publicação', items: ['Git', 'GitHub Actions', 'Testes automatizados', 'Vercel', 'GitHub Pages'], where: 'No Reldor e em todos os sites' },
   ],
 

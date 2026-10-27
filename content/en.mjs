@@ -7,16 +7,16 @@ export default {
   label: 'English',
   path: '/en/',
   meta: {
-    title: 'Marlon Rodler · Software developer',
+    title: 'Marlon Rodler · Salesforce Developer',
     description:
-      'Portfolio of Marlon Rodler, software developer. Complete web apps built with React, Node.js and Supabase, and tools for Salesforce developers.',
+      'Portfolio of Marlon Rodler, 6x certified Salesforce developer. Apex, LWC, Flow and integrations at work; complete web apps with React, Node.js and Supabase in personal projects.',
     url: 'https://marlonrodler.github.io/en/',
     image: 'https://marlonrodler.github.io/assets/img/og-en.png',
   },
 
   person: {
     name: 'Marlon Rodler',
-    role: 'Software developer',
+    role: 'Salesforce Developer · 6x certified',
     photo: { src: '/assets/img/marlon-160.webp', alt: 'Photo of Marlon Rodler' },
   },
 
@@ -28,7 +28,7 @@ export default {
 
   ui: {
     skip: 'Skip to content',
-    nav: { label: 'Main', projects: 'Projects', about: 'About', contact: 'Contact' },
+    nav: { label: 'Main', projects: 'Projects', experience: 'Experience', about: 'About', contact: 'Contact' },
     menu: 'Menu',
     closeMenu: 'Close menu',
     theme: { label: 'Theme', auto: 'Automatic', light: 'Light', dark: 'Dark' },
@@ -48,9 +48,9 @@ export default {
   },
 
   hero: {
-    title: 'I build web apps, from idea to launch.',
+    title: 'I develop on Salesforce and build web apps, from idea to launch.',
     lead:
-      'I understand the problem, design the screens, set up the database and ship it. At work, I develop on Salesforce. In my own projects, I use React, Node.js and Supabase.',
+      'For over 5 years I’ve worked on the Salesforce platform, building with Apex, Lightning Web Components, Flow and integrations. In my own projects, I build complete apps with React, Node.js and Supabase.',
     primary: 'See projects',
     secondary: 'Get in touch',
     indexTitle: 'Live projects',
@@ -141,6 +141,69 @@ export default {
     },
   ],
 
+  experienceTitle: 'Experience',
+  experienceLead: 'Over 5 years developing on the Salesforce platform, on projects for large clients in finance, retail and manufacturing.',
+  experience: [
+    {
+      role: 'Salesforce Developer',
+      company: 'Ília Digital',
+      period: 'May 2024 – present',
+      current: true,
+      points: [
+        'I develop in Apex (triggers, batches, schedules and integrations) and build Lightning Web Components.',
+        'I structure the code with the fflib framework and SOLID principles, to make it easier to maintain and test.',
+        'I handle data modeling and security, help define requirements with the business and spread good practices across the team.',
+      ],
+      tags: ['Apex', 'LWC', 'fflib', 'SOLID', 'Integrations'],
+    },
+    {
+      role: 'Salesforce Developer',
+      company: 'Nescara',
+      period: 'Jan 2022 – May 2024',
+      points: [
+        'Developed in Apex, with classes, triggers, batches, schedules and integrations.',
+        'Built components with Aura and Lightning Web Components.',
+        'Deployed to production and versioned work with Salesforce DX and scratch orgs.',
+      ],
+      tags: ['Apex', 'Aura', 'LWC', 'Salesforce DX'],
+    },
+    {
+      role: 'Salesforce Developer',
+      company: 'C3C Software',
+      period: 'Apr 2021 – Jan 2022',
+      points: [
+        'Developed in Apex with object-oriented design and SOLID: triggers, batches, schedules and integrations.',
+        'Built Aura and LWC components and deployed to production.',
+        'Designed technical solutions, handed them off to the team and onboarded new members.',
+      ],
+      tags: ['Apex', 'Aura', 'LWC'],
+    },
+    {
+      role: 'Back-end Web Developer',
+      company: 'SRVCloud',
+      period: 'Aug 2020 – Mar 2021',
+      points: ['Built and maintained web services, with object-oriented design and Git version control.'],
+      tags: ['Web services', 'Git'],
+    },
+  ],
+  certificationsTitle: '6 Salesforce certifications',
+  certifications: [
+    'Platform Developer II',
+    'Platform Developer I',
+    'JavaScript Developer I',
+    'Platform App Builder',
+    'Administrator',
+    'Associate',
+  ],
+  certificationsLink: { label: 'See on Trailblazer', href: 'https://trailblazer.me/id/marlonrodler' },
+  otherCertifications: 'Also: Scrum Foundation.',
+  educationTitle: 'Education',
+  education: [
+    { course: 'Associate degree in Systems Analysis and Development', school: 'FATEC São Paulo', period: '2018 – 2021' },
+    { course: 'Salesforce training', school: 'Pragma School', period: '2020 – 2021' },
+    { course: 'IT technical high school', school: 'ETEC', period: '2017 – 2018' },
+  ],
+
   othersTitle: 'Other projects',
   othersLead:
     'React study projects built in 2023, before I used AI in my daily work. In 2026 they got a new look, bug fixes and tests.',
@@ -171,8 +234,9 @@ export default {
   about: {
     title: 'About',
     paragraphs: [
-      'I’m a software developer. At work, I develop on Salesforce: Apex, Lightning Web Components and the delivery process between environments.',
-      'In my free time, I build my own projects from scratch to launch. I start by understanding the problem of the people who will use it, then design the screens, set up the database and ship. I pay special attention to what prevents mistakes: rules the system checks on its own, text that explains the next step, and screens that work well on a phone.',
+      'I’m a Salesforce developer who builds scalable solutions with Apex, Lightning Web Components and integrations with external systems, always focused on performance, maintainability and real business impact.',
+      'I’ve worked on complex projects involving asynchronous processing, data modeling and API integrations. Beyond code, I make heavy use of the platform’s low-code tools, especially Flow Builder, following Salesforce best practices.',
+      'In my free time, I build my own projects from scratch to launch: I understand the problem of the people who will use it, design the screens, set up the database and ship.',
     ],
   },
 
@@ -181,7 +245,7 @@ export default {
   skills: [
     { group: 'Screens and interfaces', items: ['React', 'Vite', 'Accessible HTML and CSS', 'PWA'], where: 'Player Ascend and Owldit' },
     { group: 'Database and server', items: ['Supabase (Postgres and auth)', 'Node.js', 'Web Push'], where: 'Player Ascend, Owldit and Reldor' },
-    { group: 'Salesforce', items: ['Apex', 'Lightning Web Components', 'Salesforce CLI', 'fflib'], where: 'At work and in Reldor' },
+    { group: 'Salesforce', items: ['Apex', 'Lightning Web Components', 'Aura', 'SOQL', 'Flow Builder', 'API integrations', 'fflib', 'Salesforce DX and CLI'], where: 'At work and in Reldor' },
     { group: 'Quality and deployment', items: ['Git', 'GitHub Actions', 'Automated tests', 'Vercel', 'GitHub Pages'], where: 'Reldor and every site' },
   ],
 

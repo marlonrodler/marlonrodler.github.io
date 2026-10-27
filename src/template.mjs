@@ -97,6 +97,7 @@ export function render(t, languages = [t]) {
   ].filter(Boolean).join('');
   const nav = [
     ['#projetos', t.ui.nav.projects],
+    ['#experiencia', t.ui.nav.experience],
     ['#sobre', t.ui.nav.about],
     ['#contato', t.ui.nav.contact],
   ];
@@ -200,6 +201,38 @@ ${languages.length > 1 && t.lang === languages[0].lang ? `<script>/* Na página 
     </div>
     <div class="wrap projects">
       ${t.featured.map((p, i) => project(p, t, i)).join('\n')}
+    </div>
+  </section>
+
+  <section class="section" id="experiencia" aria-labelledby="experiencia-title">
+    <div class="wrap section__head">
+      <h2 id="experiencia-title">${e(t.experienceTitle)}</h2>
+      <p>${e(t.experienceLead)}</p>
+    </div>
+    <div class="wrap exp">
+      <ol class="timeline">
+        ${t.experience.map((x) => `<li class="job${x.current ? ' job--current' : ''}">
+          <p class="job__period">${e(x.period)}</p>
+          <div class="job__body">
+            <h3>${e(x.role)}</h3>
+            <p class="job__company">${e(x.company)}</p>
+            <ul class="job__points">${x.points.map((pt) => `<li>${e(pt)}</li>`).join('')}</ul>
+            ${tags(x.tags)}
+          </div>
+        </li>`).join('')}
+      </ol>
+      <aside class="creds">
+        <section class="cred" aria-labelledby="cert-title">
+          <h3 id="cert-title">${e(t.certificationsTitle)}</h3>
+          <ul class="cert-list">${t.certifications.map((c) => `<li>${icons.check}<span>${e(c)}</span></li>`).join('')}</ul>
+          <p class="cred__note">${e(t.otherCertifications)}</p>
+          ${ext(t.certificationsLink.href, t.certificationsLink.label, t, 'link')}
+        </section>
+        <section class="cred" aria-labelledby="edu-title">
+          <h3 id="edu-title">${e(t.educationTitle)}</h3>
+          <ul class="edu-list">${t.education.map((d) => `<li><strong>${e(d.course)}</strong><span>${e(d.school)} · ${e(d.period)}</span></li>`).join('')}</ul>
+        </section>
+      </aside>
     </div>
   </section>
 
