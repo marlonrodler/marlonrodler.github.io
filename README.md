@@ -5,14 +5,16 @@ Portfólio de Marlon Rodler. Site estático, sem framework e sem dependências: 
 ## Estrutura
 
 ```text
-content/pt-BR.mjs   textos e dados do site (é aqui que se edita o conteúdo)
+content/pt-BR.mjs   textos em português (é aqui que se edita o conteúdo)
+content/en.mjs      textos em inglês
 src/template.mjs    o HTML da página, montado a partir do conteúdo
 src/icons.mjs       ícones em SVG
 build.mjs           gera index.html a partir do conteúdo
 assets/site.css     estilos (tokens de cor, tipo e espaço no topo do arquivo)
 assets/site.js      tema claro/escuro/automático, menu do celular
 assets/img/         imagens otimizadas (WebP), imagem de compartilhamento e ícone
-index.html          arquivo gerado: não edite à mão
+index.html          arquivos gerados: não edite à mão
+en/index.html
 ```
 
 ## Rodar localmente
@@ -34,11 +36,13 @@ Abra http://localhost:8080. O site usa caminhos a partir da raiz (`/assets/...`)
 
 Links de contato vazios (`null`) não aparecem no site. Para trocar uma tela de projeto, coloque a imagem em `assets/img/` (WebP, com largura e altura reais) e ajuste o `media` do projeto.
 
-## Versão em inglês
+## Idiomas
 
-1. Copie `content/pt-BR.mjs` para `content/en.mjs`, traduza e troque `lang: 'en'` e `path: 'en/'`.
-2. Em `build.mjs`, importe o arquivo e adicione à lista `languages`.
-3. Preencha `ui.otherLanguage` nos dois arquivos para o link de troca de idioma aparecer no menu.
+O site tem português (`/`) e inglês (`/en/`), com o seletor PT/EN no topo.
+
+- Os textos ficam em `content/pt-BR.mjs` e `content/en.mjs`, com as mesmas chaves. Ao mudar um, mude o outro.
+- A escolha de idioma fica guardada no navegador. Na primeira visita, quem usa o navegador em outro idioma que não português vai direto para o inglês.
+- Para um idioma novo: crie `content/<idioma>.mjs`, importe em `build.mjs` e adicione à lista `languages`.
 
 ## Publicar
 

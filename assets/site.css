@@ -163,9 +163,12 @@ main:focus { outline: none; }
 }
 .seg__btn .icon { width: 16px; height: 16px; }
 .seg__btn:hover { color: var(--ink); }
-.seg__btn[aria-pressed="true"] { background: var(--bg); color: var(--ink); box-shadow: 0 1px 3px rgb(0 0 0 / 0.16); }
-:root[data-theme="dark"] .seg__btn[aria-pressed="true"] { background: #3a3a3c; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .seg__btn[aria-pressed="true"] { background: #3a3a3c; } }
+.seg__btn[aria-pressed="true"], .seg__btn[aria-current="true"] { background: var(--bg); color: var(--ink); box-shadow: 0 1px 3px rgb(0 0 0 / 0.16); }
+.seg__link { width: auto; min-width: 32px; padding: 0 8px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.02em; text-decoration: none; }
+.seg__link:hover { text-decoration: none; }
+.seg--lang { margin-right: 4px; }
+:root[data-theme="dark"] .seg__btn:is([aria-pressed="true"], [aria-current="true"]) { background: #3a3a3c; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .seg__btn:is([aria-pressed="true"], [aria-current="true"]) { background: #3a3a3c; } }
 
 /* ---------- Cabeçalho: o único lugar com material translúcido ---------- */
 .site-header {
@@ -192,7 +195,7 @@ main:focus { outline: none; }
   .site-header__inner { gap: var(--s-2); }
   .nav-toggle { display: inline-grid; }
   .site-header__tools { margin-left: auto; }
-  .site-header__tools > a.icon-btn { display: none; }
+  .site-header__tools > a.icon-btn, .site-header__tools > .seg--theme { display: none; }
   .nav {
     position: absolute; inset: 56px 0 auto; margin: 0;
     padding: var(--s-2) var(--gutter) var(--s-5);
@@ -205,7 +208,10 @@ main:focus { outline: none; }
   .nav ul { flex-direction: column; gap: 0; }
   .nav a { width: 100%; min-height: 48px; font-size: var(--step-1); color: var(--ink); border-bottom: 1px solid var(--line); border-radius: 0; padding: 0; }
   .nav a:hover { background: none; }
+  .nav__theme { display: flex; align-items: center; justify-content: space-between; min-height: 56px; color: var(--ink); font-size: var(--step-1); }
+  .nav__theme .seg__btn { width: 44px; height: 36px; }
 }
+@media (min-width: 760px) { .nav__theme { display: none; } }
 
 /* ---------- 5. Seções ---------- */
 

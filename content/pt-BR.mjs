@@ -1,15 +1,16 @@
 // Conteúdo do portfólio em português (Brasil).
-// Para criar a versão em inglês: copie este arquivo para content/en.mjs,
-// traduza os textos e adicione o idioma em build.mjs.
+// A versão em inglês fica em content/en.mjs, com as mesmas chaves.
 // Só entra aqui o que foi verificado nos projetos (código, README ou site publicado).
 
 export default {
   lang: 'pt-BR',
+  short: 'PT',
+  label: 'Português',
   path: '/', // onde a página é publicada
   meta: {
     title: 'Marlon Rodler · Desenvolvedor de software',
     description:
-      'Portfólio de Marlon Rodler, desenvolvedor de software. Produtos completos em React, Node.js e Supabase, e ferramentas para desenvolvimento Salesforce.',
+      'Portfólio de Marlon Rodler, desenvolvedor de software. Aplicações web completas com React, Node.js e Supabase, e ferramentas para quem desenvolve em Salesforce.',
     url: 'https://marlonrodler.github.io/',
     image: 'https://marlonrodler.github.io/assets/img/og.png',
   },
@@ -30,78 +31,78 @@ export default {
 
   ui: {
     skip: 'Pular para o conteúdo',
-    nav: { projects: 'Projetos', about: 'Sobre', contact: 'Contato' },
+    nav: { label: 'Principal', projects: 'Projetos', about: 'Sobre', contact: 'Contato' },
     menu: 'Menu',
     closeMenu: 'Fechar menu',
     theme: { label: 'Tema', auto: 'Automático', light: 'Claro', dark: 'Escuro' },
-    otherLanguage: null, // ex.: { label: 'English', href: '/en/' }
+    language: 'Idioma',
     openApp: 'Abrir o app',
     viewCode: 'Ver o código',
     privateCode: 'Código privado',
     problem: 'O problema',
-    solution: 'O que eu construí',
+    solution: 'O que eu fiz',
     highlights: 'Destaques',
     stack: 'Tecnologias',
-    role: 'Minha parte',
-    screenshotNote: 'Telas reais do site publicado.',
+    role: 'Minha participação',
+    screenshotNote: 'As imagens são telas reais dos sites publicados.',
     newTab: '(abre em nova aba)',
-    footer: 'Site estático feito à mão: HTML, CSS e um pouco de JavaScript.',
+    footer: 'Site feito à mão, com HTML, CSS e um pouco de JavaScript.',
     footerCode: 'Código do site',
   },
 
   hero: {
-    title: 'Construo produtos de software do começo ao fim.',
+    title: 'Desenvolvo aplicações web, da ideia ao lançamento.',
     lead:
-      'Defino o problema, desenho a interface, modelo os dados e coloco no ar. No trabalho, desenvolvo em Salesforce; nos projetos próprios, uso React, Node.js e Supabase.',
+      'Entendo o problema, desenho as telas, monto o banco de dados e coloco no ar. No trabalho, desenvolvo em Salesforce. Nos meus projetos, uso React, Node.js e Supabase.',
     primary: 'Ver projetos',
     secondary: 'Entrar em contato',
-    indexTitle: 'Projetos no ar',
+    indexTitle: 'Projetos publicados',
   },
 
   featuredTitle: 'Projetos em destaque',
-  featuredLead: 'Três produtos publicados, cada um nascido de um problema concreto.',
+  featuredLead: 'Três projetos publicados, cada um criado para resolver um problema real.',
 
   featured: [
     {
       id: 'player-ascend',
       name: 'Player Ascend',
-      kind: 'App web para jogadores de ARAM Desordem (League of Legends)',
+      kind: 'Aplicativo web para quem joga ARAM Desordem, de League of Legends',
       theme: 'ascend',
       problem:
-        'O ARAM Desordem não tem fila ranqueada oficial. Quem joga esse modo não tem como saber se está evoluindo de uma partida para a outra.',
+        'O ARAM Desordem não tem fila ranqueada oficial. Quem joga esse modo não tem como saber se está melhorando de uma partida para a outra.',
       solution:
-        'Um agente no computador do jogador lê as partidas com o LoL aberto e envia para o site, que dá uma nota para cada partida e acompanha o progresso ao longo do tempo.',
+        'Um programa no computador do jogador lê as partidas enquanto o LoL está aberto e envia os dados para o site, que dá uma nota para cada partida e mostra a evolução ao longo do tempo.',
       highlights: [
-        'Performance Score: uma nota de 0 a 100 por partida, que vai além do KDA.',
-        'Ascend Points e uma escada própria de 10 níveis, de Papelão a Lendário.',
-        'Comparação com amigos e placar geral só para quem ativa: por padrão, só você vê os seus dados.',
-        'Contas aprovadas à mão e inativadas após 20 dias sem uso, para caber no plano gratuito.',
+        'Performance Score: nota de 0 a 100 para cada partida, que vai além do KDA.',
+        'Ascend Points e uma escala própria de 10 níveis, do Papelão ao Lendário.',
+        'Comparação com amigos e ranking geral só para quem quiser participar. Por padrão, só você vê os seus dados.',
+        'Contas aprovadas manualmente e desativadas depois de 20 dias sem uso, para caber no plano gratuito.',
       ],
       stack: ['React', 'Vite', 'Supabase', 'Vercel', 'Data Dragon (Riot)'],
-      role: 'Projeto individual: produto, interface, dados e publicação.',
+      role: 'Projeto feito sozinho: ideia, telas, banco de dados e publicação.',
       links: { app: 'https://playerascend.vercel.app/', code: null },
       media: {
         type: 'browser+phone',
-        desktop: { src: '/assets/img/player-ascend-desktop-800.webp', w: 800, h: 500, alt: 'Tela inicial do Player Ascend no computador, com login e a explicação de Performance Score, Ascend Points e níveis' },
-        phone: { src: '/assets/img/player-ascend-mobile-375.webp', w: 375, h: 812, alt: 'Tela de login do Player Ascend no celular, com a escada de níveis' },
+        desktop: { src: '/assets/img/player-ascend-desktop-800.webp', w: 800, h: 500, alt: 'Tela inicial do Player Ascend no computador, com o login e a explicação de Performance Score, Ascend Points e níveis' },
+        phone: { src: '/assets/img/player-ascend-mobile-375.webp', w: 375, h: 812, alt: 'Tela de login do Player Ascend no celular, com a escala de níveis' },
         host: 'playerascend.vercel.app',
       },
     },
     {
       id: 'owldit',
       name: 'Owldit',
-      kind: 'App instalável que avisa sobre balanços de ações da B3',
+      kind: 'Aplicativo que avisa quando saem os balanços das suas ações da B3',
       theme: 'owldit',
       problem:
-        'Acompanhar balanços trimestrais e fatos relevantes de cada empresa da carteira toma tempo, e para quem não é da área nem fica claro o que olhar.',
+        'Acompanhar os balanços trimestrais e os fatos relevantes de cada empresa da carteira dá trabalho. E quem não é da área nem sabe direito o que olhar.',
       solution:
-        'Um app que acompanha as ações escolhidas e manda um aviso simples no celular ou no computador quando sai um balanço ou fato relevante. Ele avisa; não recomenda compra nem venda.',
+        'Um aplicativo que acompanha as ações escolhidas e manda um aviso simples no celular ou no computador quando sai um balanço ou fato relevante. Ele só avisa: não recomenda comprar nem vender.',
       highlights: [
-        'Instalável como app (PWA), com notificações Web Push no celular e no computador.',
-        'Interface em português e inglês, com tema claro, escuro ou automático.',
+        'Pode ser instalado como aplicativo (PWA) e manda notificações no celular e no computador.',
+        'Disponível em português e inglês, com tema claro, escuro ou automático.',
       ],
       stack: ['React', 'Vite', 'PWA', 'Web Push', 'Supabase', 'Vercel'],
-      role: 'Projeto individual: produto, interface, dados e publicação.',
+      role: 'Projeto feito sozinho: ideia, telas, banco de dados e publicação.',
       links: { app: 'https://owldit.vercel.app/', code: null },
       media: {
         type: 'phone',
@@ -111,59 +112,59 @@ export default {
     {
       id: 'reldor',
       name: 'Reldor',
-      kind: 'Ferramenta de linha de comando e plugin de IA para desenvolvimento Salesforce',
+      kind: 'Ferramenta de linha de comando, com plugin de IA, para quem desenvolve em Salesforce',
       theme: 'reldor',
       problem:
-        'A IA escreve código Salesforce rápido, mas não enxerga a org inteira: o flow que roda antes da trigger, a regra que quebra o teste de outro time. E o Git compara linhas, não itens de metadado, então dois devs no mesmo profile viram conflito.',
+        'A IA escreve código Salesforce rápido, mas não enxerga a org inteira: o flow que roda antes da trigger, a regra que quebra o teste de outro time. Além disso, o Git compara linhas, e não itens de metadado. Dois desenvolvedores mexendo no mesmo profile acabam em conflito.',
       solution:
-        'Um comando que monta um índice do projeto e calcula esses fatos com scripts, e um plugin que ensina a IA (Kiro ou Claude Code) a usar o comando. Quem descobre os fatos é o script, não a IA, por isso as respostas se repetem.',
+        'Um comando que monta um índice do projeto e levanta esses fatos com scripts, mais um plugin que ensina a IA (Kiro ou Claude Code) a usar esse comando. Quem descobre os fatos é o script, não a IA, então a resposta é sempre a mesma.',
       highlights: [
         'Mostra o que acontece quando um registro é salvo, na ordem real de execução.',
-        'Merge item a item de profiles e permission sets, sem conflito falso.',
-        'Commit limpo: separa o seu trabalho do que veio da org no retrieve.',
-        'Não executa nada no Git nem na org: confere e entrega os comandos prontos.',
-        '107 testes rodando no GitHub Actions, em Windows e Ubuntu, com Node 18 e 22.',
+        'Faz o merge de profiles e permission sets item por item, sem conflito falso.',
+        'Commit limpo: separa o que é seu do que veio da org no retrieve.',
+        'Não executa nada no Git nem na org: confere e entrega os comandos prontos para você rodar.',
+        '107 testes automáticos no GitHub Actions, em Windows e Ubuntu, com Node 18 e 22.',
       ],
       stack: ['Node.js', 'MCP', 'GitHub Actions', 'Salesforce CLI'],
-      role: 'Projeto individual: design da ferramenta, código, testes e documentação.',
+      role: 'Projeto feito sozinho: ideia, código, testes e documentação.',
       links: { app: null, code: 'https://github.com/marlonrodler/reldor' },
       media: {
         type: 'terminal',
         title: 'Como o Reldor funciona',
         lines: [
-          ['you', 'Você fala'],
+          ['you', 'Você faz um pedido'],
           ['arrow', 'a IA, com a skill do Reldor'],
           ['arrow', 'roda o comando reldor'],
-          ['arrow', 'scripts leem o índice do projeto'],
-          ['back', 'o comando devolve fatos em JSON'],
+          ['arrow', 'os scripts leem o índice do projeto'],
+          ['back', 'o comando devolve os fatos em JSON'],
           ['back', 'a IA explica o resultado'],
         ],
-        footnote: 'Só lê metadados, nunca registros, e roda na máquina de quem usa.',
+        footnote: 'Lê só metadados, nunca registros, e roda no computador de quem usa.',
       },
     },
   ],
 
   othersTitle: 'Outros projetos',
   othersLead:
-    'Projetos de estudo em React de 2023, feitos antes de eu usar IA no meu fluxo. Em 2026 ganharam visual novo, correções e testes.',
+    'Projetos de estudo em React, feitos em 2023, antes de eu usar IA no dia a dia. Em 2026, ganharam visual novo, correções e testes.',
   others: [
     {
       name: 'Typing Speed',
-      summary: 'Jogo de digitação em português: cada palavra certa soma pontos e segundos no relógio.',
+      summary: 'Jogo de digitação em português: cada palavra certa vale pontos e mais segundos no relógio.',
       stack: ['React', 'Vite'],
       image: { src: '/assets/img/typing-speed-640.webp', w: 640, h: 422, alt: 'Partida do Typing Speed com tempo, pontos e quatro palavras para digitar' },
       links: { app: 'https://marlonrodler.github.io/typing-speed/', code: 'https://github.com/marlonrodler/typing-speed' },
     },
     {
       name: 'Champions Challenge',
-      summary: 'Desafio para acertar o nome de todos os campeões de League of Legends antes que o tempo acabe.',
+      summary: 'Desafio de acertar o nome de todos os campeões de League of Legends antes que o tempo acabe.',
       stack: ['React', 'Vite', 'Data Dragon'],
       image: { src: '/assets/img/champions-challenge-640.webp', w: 640, h: 422, alt: 'Partida do Champions Challenge com cartas de campeões e o placar de acertos' },
       links: { app: 'https://marlonrodler.github.io/leagueoflegends-game/', code: 'https://github.com/marlonrodler/leagueoflegends-game' },
     },
     {
       name: 'Pokédex',
-      summary: 'Busca de Pokémon por nome ou número, com tipos, atributos e descrição da PokéAPI.',
+      summary: 'Pokédex com busca por nome ou número, tipos, atributos e descrição, usando a PokéAPI.',
       stack: ['React', 'Vite', 'PokéAPI'],
       image: { src: '/assets/img/pokedex-640.webp', w: 640, h: 422, alt: 'Pokédex vermelha mostrando o Charizard na tela' },
       links: { app: 'https://marlonrodler.github.io/pokedex-react/', code: 'https://github.com/marlonrodler/pokedex-react' },
@@ -173,23 +174,23 @@ export default {
   about: {
     title: 'Sobre',
     paragraphs: [
-      'Sou desenvolvedor de software. No dia a dia, trabalho com desenvolvimento Salesforce: Apex, Lightning Web Components e o fluxo de entrega entre ambientes.',
-      'Fora do trabalho, construo produtos próprios do começo ao fim. Começo pelo problema de quem vai usar, desenho a interface, modelo os dados e publico. Dou atenção especial ao que evita erro humano: regras que o sistema confere sozinho, textos que explicam o próximo passo, telas que funcionam bem no celular.',
+      'Sou desenvolvedor de software. No trabalho, desenvolvo em Salesforce: Apex, Lightning Web Components e o processo de entrega entre os ambientes.',
+      'Nas horas livres, crio meus próprios projetos do zero até o lançamento. Começo entendendo o problema de quem vai usar, desenho as telas, monto o banco de dados e publico. Cuido principalmente do que evita erro: regras que o próprio sistema confere, textos que explicam o próximo passo e telas que funcionam bem no celular.',
     ],
   },
 
-  skillsTitle: 'O que eu uso',
-  skillsLead: 'Agrupado pelo que resolve, com o projeto onde aparece.',
+  skillsTitle: 'Ferramentas que uso',
+  skillsLead: 'Separadas pelo tipo de trabalho, com o projeto onde cada uma aparece.',
   skills: [
-    { group: 'Interfaces', items: ['React', 'Vite', 'HTML e CSS acessíveis', 'PWA'], where: 'Player Ascend, Owldit' },
-    { group: 'Dados e servidor', items: ['Supabase (Postgres e autenticação)', 'Node.js', 'Web Push'], where: 'Player Ascend, Owldit, Reldor' },
-    { group: 'Salesforce', items: ['Apex', 'Lightning Web Components', 'Salesforce CLI', 'fflib'], where: 'Trabalho e Reldor' },
-    { group: 'Qualidade e entrega', items: ['Git', 'GitHub Actions', 'Testes automatizados', 'Vercel', 'GitHub Pages'], where: 'Reldor e todos os sites' },
+    { group: 'Telas e interfaces', items: ['React', 'Vite', 'HTML e CSS com acessibilidade', 'PWA'], where: 'Player Ascend e Owldit' },
+    { group: 'Banco de dados e servidor', items: ['Supabase (Postgres e login)', 'Node.js', 'Web Push'], where: 'Player Ascend, Owldit e Reldor' },
+    { group: 'Salesforce', items: ['Apex', 'Lightning Web Components', 'Salesforce CLI', 'fflib'], where: 'No trabalho e no Reldor' },
+    { group: 'Qualidade e publicação', items: ['Git', 'GitHub Actions', 'Testes automatizados', 'Vercel', 'GitHub Pages'], where: 'No Reldor e em todos os sites' },
   ],
 
   contact: {
     title: 'Contato',
-    lead: 'Tem uma vaga de desenvolvedor ou quer conversar sobre algum dos meus projetos? Me chame no LinkedIn.',
+    lead: 'Tem uma vaga para desenvolvedor ou quer conversar sobre algum projeto? Me chame no LinkedIn.',
     github: 'GitHub',
     linkedin: 'LinkedIn',
     email: 'E-mail',

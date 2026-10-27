@@ -41,3 +41,12 @@
   addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 })();
+
+// Idioma: lembra a escolha para a próxima visita
+(() => {
+  document.querySelectorAll('[data-lang-link]').forEach((a) =>
+    a.addEventListener('click', () => {
+      try { localStorage.setItem('lang', a.getAttribute('lang')); } catch (_) { /* sem armazenamento */ }
+    })
+  );
+})();

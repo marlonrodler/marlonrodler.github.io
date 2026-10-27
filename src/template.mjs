@@ -84,7 +84,7 @@ function other(o, t) {
   </li>`;
 }
 
-export function render(t) {
+export function render(t, languages = [t]) {
   const L = t.links;
   const contactLinks = [
     L.linkedin && `<li>${ext(L.linkedin, t.contact.linkedin, t, 'contact-link', icons.linkedin)}</li>`,
@@ -111,6 +111,7 @@ export function render(t) {
 <title>${e(t.meta.title)}</title>
 <meta name="description" content="${e(t.meta.description)}">
 <link rel="canonical" href="${e(t.meta.url)}">
+${languages.length > 1 ? languages.map((l) => `<link rel="alternate" hreflang="${e(l.lang)}" href="${e(l.meta.url)}">`).join('\n') + `\n<link rel="alternate" hreflang="x-default" href="${e(languages[0].meta.url)}">` : ''}
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
@@ -127,6 +128,7 @@ export function render(t) {
 <link rel="icon" href="/images/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <script>try{var m=localStorage.getItem('theme');if(m==='light'||m==='dark')document.documentElement.dataset.theme=m}catch(_){}</script>
+${languages.length > 1 && t.lang === languages[0].lang ? `<script>/* Na página padrão: vai para o idioma escolhido antes; na primeira visita, navegador fora do português vai para o inglês */try{var l=localStorage.getItem('lang'),p=${JSON.stringify(Object.fromEntries(languages.slice(1).map((l) => [l.lang, l.path])))};if(!l&&!/^pt/i.test(navigator.language||'')){l='en'}if(l&&p[l]&&!location.hash)location.replace(p[l])}catch(_){}</script>` : ''}
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org',
@@ -142,12 +144,22 @@ export function render(t) {
 <header class="site-header" data-header>
   <div class="wrap site-header__inner">
     <a class="brand" href="#topo">${e(t.person.name)}</a>
-    <nav class="nav" id="nav" aria-label="Principal" data-nav>
+    <nav class="nav" id="nav" aria-label="${e(t.ui.nav.label)}" data-nav>
       <ul>${nav.map(([h, l]) => `<li><a href="${h}">${e(l)}</a></li>`).join('')}</ul>
-      ${t.ui.otherLanguage ? `<a class="nav__lang" href="${e(t.ui.otherLanguage.href)}" lang="en">${e(t.ui.otherLanguage.label)}</a>` : ''}
+      <div class="nav__theme">
+        <span>${e(t.ui.theme.label)}</span>
+        <div class="seg" role="group" aria-label="${e(t.ui.theme.label)}">
+        ${themeBtn('auto', icons.auto)}${themeBtn('light', icons.sun)}${themeBtn('dark', icons.moon)}
+      </div>
+      </div>
     </nav>
     <div class="site-header__tools">
-      <div class="seg" role="group" aria-label="${e(t.ui.theme.label)}">
+      ${languages.length > 1 ? `<nav class="seg seg--lang" aria-label="${e(t.ui.language)}">${languages
+        .map((l) => l.lang === t.lang
+          ? `<a class="seg__btn seg__link" href="${e(l.path)}" aria-current="true" lang="${e(l.lang)}" title="${e(l.label)}">${e(l.short)}<span class="sr-only"> ${e(l.label)}</span></a>`
+          : `<a class="seg__btn seg__link" href="${e(l.path)}" hreflang="${e(l.lang)}" lang="${e(l.lang)}" title="${e(l.label)}" data-lang-link>${e(l.short)}<span class="sr-only"> ${e(l.label)}</span></a>`)
+        .join('')}</nav>` : ''}
+      <div class="seg seg--theme" role="group" aria-label="${e(t.ui.theme.label)}">
         ${themeBtn('auto', icons.auto)}${themeBtn('light', icons.sun)}${themeBtn('dark', icons.moon)}
       </div>
       ${headerSocial}
